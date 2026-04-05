@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Notifications | Ethos Minimal</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-surface": "#1b1c1c",
+                    "on-secondary": "#ffffff",
+                    "tertiary-fixed": "#ffdad3",
+                    "tertiary-container": "#cf4527",
+                    "surface-container-highest": "#e4e2e1",
+                    "surface-dim": "#dcd9d9",
+                    "on-primary": "#ffffff",
+                    "surface-tint": "#bb0452",
+                    "secondary-fixed-dim": "#e3b5ff",
+                    "surface-variant": "#e4e2e1",
+                    "on-secondary-fixed": "#2f004c",
+                    "on-primary-container": "#fffbff",
+                    "outline-variant": "#e2bec3",
+                    "on-secondary-container": "#580088",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary-fixed": "#f4daff",
+                    "inverse-on-surface": "#f3f0ef",
+                    "primary": "#b7004f",
+                    "on-tertiary": "#ffffff",
+                    "background": "#fcf9f8",
+                    "outline": "#8e6f74",
+                    "on-tertiary-fixed": "#3d0600",
+                    "surface-container": "#f0eded",
+                    "secondary-container": "#cb80fe",
+                    "secondary": "#833ab4",
+                    "on-surface-variant": "#5a4045",
+                    "surface-container-low": "#f6f3f2",
+                    "on-secondary-fixed-variant": "#6a1c9b",
+                    "primary-fixed-dim": "#ffb1c0",
+                    "on-tertiary-container": "#fffbff",
+                    "surface": "#fcf9f8",
+                    "tertiary-fixed-dim": "#ffb4a4",
+                    "primary-fixed": "#ffd9df",
+                    "on-tertiary-fixed-variant": "#8c1800",
+                    "on-error-container": "#93000a",
+                    "inverse-primary": "#ffb1c0",
+                    "surface-bright": "#fcf9f8",
+                    "on-error": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "primary-container": "#da2a67",
+                    "on-primary-fixed-variant": "#90003d",
+                    "on-primary-fixed": "#3f0017",
+                    "on-background": "#1b1c1c",
+                    "tertiary": "#ac2c11",
+                    "error": "#ba1a1a",
+                    "inverse-surface": "#303030",
+                    "surface-container-high": "#eae7e7"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Inter"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .signature-gradient {
+            background: linear-gradient(to right, #b7004f, #833ab4, #ac2c11);
+        }
+        .avatar-ring {
+            padding: 2px;
+            background: linear-gradient(to bottom right, #b7004f, #833ab4, #ac2c11);
+        }
+    </style>
+</head>
+<body class="bg-background font-body text-on-surface antialiased">
+<!-- Top Navigation Shell (Mobile) -->
+<header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-stone-950/80 backdrop-blur-md flex justify-between items-center px-6 h-16 w-full lg:hidden">
+<span class="text-2xl font-bold tracking-tighter bg-gradient-to-r from-[#b7004f] via-[#833ab4] to-[#ac2c11] bg-clip-text text-transparent">Ethos Minimal</span>
+<div class="flex items-center gap-4">
+<button class="active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-stone-500">settings</span>
+</button>
+<img alt="User profile" class="w-8 h-8 rounded-full object-cover" data-alt="Close up portrait of a stylish woman with soft lighting and professional studio background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRteRDLeWFeCT2QBqnzgdsqUWBA-Sx_piuCstqcs03sMRhAb3bytfUeVks8_Y_mPaDiNPaSSi4C-ErjQMzPcIP2P3oGhVuF4hxPUc7CPBCc8QOyw4sYxDQd4xQVvEVtkzOBkLjWGuajEuMTTujpIQTEjYpBdtYhyBR5UBZM8e6wSAAgEqh1Vk5YXHoRxm06vQTFqixccHEvPalLo4ceKsdsSwr1-lTqFri9GKHu58X4oYMVjgOEENTjnrhuzSLEZwmEF_8879D31E1"/>
+</div>
+</header>
+<div class="flex min-h-screen">
+<!-- Side Navigation Bar (Desktop) -->
+<nav class="hidden lg:flex flex-col p-4 fixed left-0 top-0 h-full h-screen w-64 border-r border-[#e4e2e1]/30 bg-white dark:bg-stone-950 space-y-2 bg-[#fcf9f8]">
+<div class="mb-8 px-2 py-4">
+<span class="text-2xl font-bold tracking-tighter bg-gradient-to-r from-[#b7004f] via-[#833ab4] to-[#ac2c11] bg-clip-text text-transparent">Ethos Minimal</span>
+</div>
+<div class="space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-stone-600 hover:bg-[#f6f3f2] transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="text-sm font-medium">Feed</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-stone-600 hover:bg-[#f6f3f2] transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="explore">explore</span>
+<span class="text-sm font-medium">Discover</span>
+</a>
+<!-- Active Tab: Notifications -->
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg bg-[#f6f3f2] text-[#b7004f] border-r-4 border-[#b7004f] transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="notifications" style="font-variation-settings: 'FILL' 1;">notifications</span>
+<span class="text-sm font-semibold">Notifications</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-stone-600 hover:bg-[#f6f3f2] transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="mail">mail</span>
+<span class="text-sm font-medium">Messages</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-stone-600 hover:bg-[#f6f3f2] transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="text-sm font-medium">Profile</span>
+</a>
+</div>
+<div class="mt-auto pt-4 border-t border-[#e4e2e1]/30">
+<div class="flex items-center gap-3 px-2 py-3">
+<img alt="Editorial Profile" class="w-10 h-10 rounded-full object-cover" data-alt="Professional headshot of a woman with minimalist aesthetic and neutral tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEa8LcMr46VkPDC2sen8j5lWZO7qhsql3QXcflA2F9q2aL6Q_o6-Khw441Q4fcjepIF2Huyg4B05o-vZMlsHm-FEukty3nw-C2PU1WYvi841Ub9FtNtEAFYyewOidonTOmZhZyoVvDYmshcs_brkyalhL99jeRAbPjBGciCyZDb1UnQQ-NEyX54-XdQ_WOwCpeEjWg3JXsJbZxH0jdnnsBG-d2m3MLu9BBIqa32WFwIOuMu04mGEhT8aVTO2XIHjX1w-ydcjs6GXj0"/>
+<div class="flex flex-col">
+<span class="text-sm font-bold">The Curator</span>
+<span class="text-xs text-on-surface-variant">Premium Member</span>
+</div>
+</div>
+</div>
+</nav>
+<!-- Main Content Area -->
+<main class="flex-1 lg:ml-64 pt-20 lg:pt-8 pb-20 lg:pb-8 flex justify-center">
+<div class="w-full max-w-[600px] px-4 md:px-6">
+<!-- Page Header -->
+<div class="flex items-center justify-between mb-8">
+<h1 class="text-2xl font-bold tracking-tight text-on-surface">Notifications</h1>
+<button class="text-primary text-sm font-semibold hover:opacity-80 transition-opacity">
+                        Clear All
+                    </button>
+</div>
+<!-- Notification Section: New -->
+<div class="mb-10">
+<h2 class="text-sm font-bold text-on-surface-variant mb-4 px-1">New</h2>
+<div class="space-y-1">
+<!-- Type: Follower -->
+<div class="group flex items-center justify-between p-3 rounded-xl bg-surface-container-lowest hover:bg-surface-container-low transition-colors duration-200">
+<div class="flex items-center gap-4">
+<div class="relative w-12 h-12 flex-shrink-0">
+<div class="absolute inset-0 rounded-full avatar-ring"></div>
+<img alt="User" class="absolute inset-[2px] w-[calc(100%-4px)] h-[calc(100%-4px)] rounded-full object-cover border-2 border-white" data-alt="Close-up of a smiling man with sharp facial features and natural soft daylight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwpsqf4oB1zEBrUpQuuuq1vJM5igt6CPLjkud1WvpAGloUqhUkd7nKbmvN0nNldyybm_-8iDom3bQyULWTWprjHI76ipQXGS86K11pNM6oru53qouCX8AEGznwEemoqZ5eZMsvouMRL6LE7Q6YR-8c3gLTExifqknGl5TBbSm5bNI08KcBeW9vAFNh4N-0vsGQAxQ3cxUbBDiyNkQYvC_vxB2asoWa7Dz-VSGEMmkjb-Y-3cDPA_6A_MKCP3NdheHuRk96U8O7XEGq"/>
+</div>
+<div class="text-sm leading-snug">
+<span class="font-bold text-on-surface">julian_voss</span>
+<span class="text-on-surface-variant">started following you.</span>
+<span class="text-[#8E8E8E] ml-1">2m</span>
+</div>
+</div>
+<button class="signature-gradient text-white text-xs font-bold px-5 py-2 rounded-lg active:scale-95 transition-transform">
+                                Follow
+                            </button>
+</div>
+<!-- Type: Mention -->
+<div class="group flex items-center justify-between p-3 rounded-xl bg-surface-container-lowest hover:bg-surface-container-low transition-colors duration-200">
+<div class="flex items-center gap-4">
+<img alt="User" class="w-12 h-12 rounded-full object-cover flex-shrink-0" data-alt="Portrait of a young woman with a vibrant smile in an urban setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDs9sMH2aeY9Ww8J1REig8TXCAwOrugerQV_peoJ9gIRqOM1xKhOKnMh7ZacVu7NhOIQwWmD3cd0kpU3mXarAv-AV5t4GdWXGo7662OEu79v_ZW2qLn4Lb3vfHB3G-oLZtCcUzdcUbj7H7Epm1DrvV1lZhgZve2xWPgcPtkzez8T18IhYOLlg29v6Kd67Mr2BxntTv_OcGiwh22rYMQ6IAjV2xrKVrt4EGgj7S14SALT1PIo4y29JIZLKFk-QTRYpj_439LlkEbCEPS"/>
+<div class="text-sm leading-snug">
+<span class="font-bold text-on-surface">elena.style</span>
+<span class="text-on-surface-variant">mentioned you in a comment: </span>
+<span class="text-primary">@TheCurator</span>
+<span class="text-on-surface-variant italic">"This palette is incredible! ✨"</span>
+<span class="text-[#8E8E8E] ml-1">15m</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Notification Section: Earlier -->
+<div>
+<h2 class="text-sm font-bold text-on-surface-variant mb-4 px-1">Earlier</h2>
+<div class="space-y-1">
+<!-- Type: Like -->
+<div class="group flex items-center justify-between p-3 rounded-xl bg-surface-container-lowest hover:bg-surface-container-low transition-colors duration-200">
+<div class="flex items-center gap-4">
+<img alt="User" class="w-12 h-12 rounded-full object-cover flex-shrink-0" data-alt="Street style photograph of a man with casual clothing in a modern architectural setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFO54n6y_1OjkW6U3TN5Vuc1LhFrdt7nCIpujsJ05McxTiW3DlRz-_2akpF9M6-Gm9LpBMCaCzX0svbcQCfxb1CcDq4Jxv3V9NjRzHlhGKYsPNkMAWLXs4MFD5MEbsb0tP9WERHyZ5YgNu9m6B3S4srLVz51hiQhjJzHfWi1xSc-Sol91OwKPvWGvgKDYdIqkwI3Xt_pYhNoWCJSKgpUWgTjr8iiKarmJ4Aet-aNrjUgNB1Tb2feR1LdKiryulG0w_dL_PkyjFe_Bk"/>
+<div class="text-sm leading-snug">
+<span class="font-bold text-on-surface">marcus_xyz</span>
+<span class="text-on-surface-variant">liked your post.</span>
+<span class="text-[#8E8E8E] ml-1">2h</span>
+</div>
+</div>
+<img alt="Post thumbnail" class="w-10 h-10 rounded-lg object-cover flex-shrink-0" data-alt="Vibrant fashion photography featuring bold colors and high-end aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuANwcvZOoYg5II5rfoxtJFCUp5pUzFVSgxkzUuuOkOQ6ATXcrRTcVaFI_-MCFvsoiJFh8j8lWLvBjN3L5jROQz3TUWbXpdb_b0LFQDJf2mP1vPGEGxK-vjiLnz04UQUtjiBb_NoWIbh6iEZOV2wEcw9UEoSUli9XFxwjeGA9i_jnqkeSsWfhyCSjvT2QFLWyrE9P5wvDZoCexMnS1ccf02w5LsYhQVPCCdno5uwfzA3f2COYg3TzY7-plc0JYEowZUsTxKlFugFiVKE"/>
+</div>
+<!-- Type: Story Reaction -->
+<div class="group flex items-center justify-between p-3 rounded-xl bg-surface-container-lowest hover:bg-surface-container-low transition-colors duration-200">
+<div class="flex items-center gap-4">
+<div class="relative w-12 h-12 flex-shrink-0">
+<div class="absolute inset-0 rounded-full avatar-ring"></div>
+<img alt="User" class="absolute inset-[2px] w-[calc(100%-4px)] h-[calc(100%-4px)] rounded-full object-cover border-2 border-white" data-alt="Candid portrait of a woman laughing with soft sunset light hitting her face" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9NTmRrqaxPlaHQ5PdIjCI1h49ah6_bk9OdVWn3spbXS-adNuC5Z8TfSmEhRNlISX6g77zrctVywiOXkaViXN0rNzkEbplayE1nWyfDmGYenBe5Oh_bCxDnhKZ8NUsSiUfUagPgd50BFfzV1qw4ivrAv8HBehAgi0tZ7GUM6yPlxz7M4OT1nyDbaTHCaZPt8D7w2GKp0YBR0O02VtKqr6Uq4RkriVKo1oMB1XhSEuf7qKfLD-mGnaV7i3ic-udOe2DhoCOZInHgbN9"/>
+</div>
+<div class="text-sm leading-snug">
+<span class="font-bold text-on-surface">sophia_vibe</span>
+<span class="text-on-surface-variant">reacted to your story: 🔥</span>
+<span class="text-[#8E8E8E] ml-1">5h</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center overflow-hidden">
+<img alt="Story" class="w-full h-full object-cover opacity-50" data-alt="Atmospheric shot of a minimalist workspace with a laptop and a cup of coffee" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzAkYlEvmKg6TqRhhyarOA3tFejOqHNhuSXU6D5TCifn8OkBbb5ujEjYsKU0hgsj3KEM5zPtb6Pu7R8CfcAxfKfozCrma5xB5ieAqryenFcydH80GOWdWIuXVVmgPCAnNtuqluOrxZR_9R8vMGJf5PhKc8XOY1btcnIjl3iwSXo_6K1PRsxObHDKH6AcF8HN4-p5vZQwKBYTTnv6t7YLKzRYeej99bMjGCxWWNo61RJNiWxlkGZ2Wi1Qw4Jgc9Nknz2OybUxF9pSdu"/>
+</div>
+</div>
+<!-- Type: Multiple Likes -->
+<div class="group flex items-center justify-between p-3 rounded-xl bg-surface-container-lowest hover:bg-surface-container-low transition-colors duration-200">
+<div class="flex items-center gap-4">
+<div class="flex -space-x-4">
+<img alt="User" class="w-10 h-10 rounded-full border-2 border-white object-cover" data-alt="Portrait of a young man with glasses and professional lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBS2jzlHpG0iQlK2c-RF2ritFk4ftDepWUKZ7EkzQuqeNxeIu7sRyY1akR6cWaxTXLJ7fVBF8u1ABYKRkggL4WTD5NK4V3l7RWH5g2FGTBcZiaengXyFcVO17wIyHKsS6XuKUDbET753wzPWncyvwk9Leemmi6WTNknUSOaxQmtHutiTW8yWnZSx2MPu0XixxUtEsLs3kbK4nwXNIU5BWNIAOxcDmCFZ7hy92CAON7PUF82S2xdr76pY7P9XhCVDj2ZHTKhBe152oqg"/>
+<img alt="User" class="w-10 h-10 rounded-full border-2 border-white object-cover" data-alt="Close up portrait of a stylish woman with soft lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBO5ft3pKS2xmInstAjKBsVjQG-n0HHiQA90aJOn309rxlywmMja-3yydgIMBzQ7ZOSu0YOddkT7UQvyz9lnn4hmneeMIvdOHJuoVKI4JgyqH_tJ5WpHACpbC2Q-fvDi3ThHPWFXabJkvWbddjqH2otF3FMV2GOKgmMUmByuiJz8iqsOywOUCaIOD7Sc-pCztykgSQKY5l_q4N_7OoZSRDEbkJGUzOpqj669HpvFcdCuH0gjuC71N1ZkhT0LxZbtx9HWnUX2LYI8Geb"/>
+</div>
+<div class="text-sm leading-snug">
+<span class="font-bold text-on-surface">derek_k, alina.m</span>
+<span class="text-on-surface-variant">and 4 others liked your photo.</span>
+<span class="text-[#8E8E8E] ml-1">1d</span>
+</div>
+</div>
+<img alt="Post thumbnail" class="w-10 h-10 rounded-lg object-cover flex-shrink-0" data-alt="Minimalist architectural detail of a white building against a clear blue sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNAWcf3dWV6oiD5N4QUDbiN_yHLZ31oqDwqlB5tp7dOZIhPPtQzVxyL4julDUUa7yE4Pu9ncuAk8sNip6pQBn4Z1I4VXm1rnQv0vI-5awpj4UAKCVAnmCSnmAbp2xemuqyxHQZ2zEo1QPTURiTWyqfAUMsiGWZr6Rq5RTsOOkK7ss2YyR41s-Ev91EsdY9XaffWPiTXt4u4Thh4w5cVezyexMwj8QWOAGDkvRT8AppwEsm9Cda6r8FZBkmeqcEAH1pH0LNVpEmHnXG"/>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 right-0 h-16 bg-white/80 backdrop-blur-md flex justify-around items-center px-4 border-t border-[#e4e2e1]/30 z-50">
+<button class="flex flex-col items-center text-stone-500">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+</button>
+<button class="flex flex-col items-center text-stone-500">
+<span class="material-symbols-outlined" data-icon="explore">explore</span>
+</button>
+<button class="flex flex-col items-center text-[#b7004f]">
+<span class="material-symbols-outlined" data-icon="notifications" style="font-variation-settings: 'FILL' 1;">notifications</span>
+</button>
+<button class="flex flex-col items-center text-stone-500">
+<span class="material-symbols-outlined" data-icon="mail">mail</span>
+</button>
+<button class="flex flex-col items-center text-stone-500">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+</button>
+</nav>
+</div>
+</body></html>

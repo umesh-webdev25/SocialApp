@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Editorial Studio | Admin Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-surface": "#1b1c1c",
+                    "tertiary-container": "#cf4527",
+                    "on-secondary-container": "#580088",
+                    "tertiary-fixed-dim": "#ffb4a4",
+                    "error": "#ba1a1a",
+                    "primary-container": "#da2a67",
+                    "inverse-primary": "#ffb1c0",
+                    "surface-container-high": "#eae7e7",
+                    "outline-variant": "#e2bec3",
+                    "surface-container-highest": "#e4e2e1",
+                    "on-tertiary-fixed-variant": "#8c1800",
+                    "surface-tint": "#bb0452",
+                    "outline": "#8e6f74",
+                    "primary": "#b7004f",
+                    "primary-fixed": "#ffd9df",
+                    "on-background": "#1b1c1c",
+                    "secondary-container": "#cb80fe",
+                    "error-container": "#ffdad6",
+                    "on-tertiary": "#ffffff",
+                    "secondary-fixed": "#f4daff",
+                    "on-error-container": "#93000a",
+                    "surface-bright": "#fcf9f8",
+                    "on-primary-container": "#fffbff",
+                    "inverse-surface": "#303030",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary": "#ffffff",
+                    "surface-container-low": "#f6f3f2",
+                    "on-primary": "#ffffff",
+                    "on-tertiary-fixed": "#3d0600",
+                    "surface": "#fcf9f8",
+                    "on-error": "#ffffff",
+                    "on-primary-fixed": "#3f0017",
+                    "on-primary-fixed-variant": "#90003d",
+                    "secondary-fixed-dim": "#e3b5ff",
+                    "secondary": "#833ab4",
+                    "background": "#fcf9f8",
+                    "surface-dim": "#dcd9d9",
+                    "on-tertiary-container": "#fffbff",
+                    "tertiary-fixed": "#ffdad3",
+                    "primary-fixed-dim": "#ffb1c0",
+                    "inverse-on-surface": "#f3f0ef",
+                    "on-secondary-fixed-variant": "#6a1c9b",
+                    "tertiary": "#ac2c11",
+                    "surface-variant": "#e4e2e1",
+                    "on-surface-variant": "#5a4045",
+                    "on-secondary-fixed": "#2f004c",
+                    "surface-container": "#f0eded"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Inter"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .signature-gradient {
+            background: linear-gradient(45deg, #b7004f, #833ab4, #ac2c11);
+        }
+        .signature-text-gradient {
+            background: linear-gradient(to right, #b7004f, #833ab4, #ac2c11);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface antialiased">
+<!-- SideNavBar -->
+<aside class="fixed left-0 top-0 h-full flex flex-col p-4 w-64 border-r border-outline-variant/15 bg-[#fcf9f8] dark:bg-stone-950 z-50">
+<div class="mb-8 px-2">
+<h1 class="text-xl font-black bg-gradient-to-r from-[#b7004f] via-[#833ab4] to-[#ac2c11] bg-clip-text text-transparent">Editorial Studio</h1>
+<p class="text-xs text-on-surface-variant font-medium mt-1">Admin Dashboard</p>
+</div>
+<nav class="flex-1 space-y-1">
+<!-- Active: Dashboard -->
+<a class="flex items-center gap-3 px-3 py-2.5 text-[#b7004f] dark:text-[#ff4d94] font-semibold bg-[#f6f3f2] dark:bg-stone-900 rounded-lg transition-transform active:scale-[0.98]" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="text-sm">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 text-[#5a4045] dark:text-stone-400 hover:text-[#b7004f] hover:bg-[#f6f3f2] dark:hover:bg-stone-900 transition-all duration-200 active:scale-[0.98]" href="#">
+<span class="material-symbols-outlined" data-icon="auto_awesome_motion">auto_awesome_motion</span>
+<span class="text-sm">Content</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 text-[#5a4045] dark:text-stone-400 hover:text-[#b7004f] hover:bg-[#f6f3f2] dark:hover:bg-stone-900 transition-all duration-200 active:scale-[0.98]" href="#">
+<span class="material-symbols-outlined" data-icon="analytics">analytics</span>
+<span class="text-sm">Analytics</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 text-[#5a4045] dark:text-stone-400 hover:text-[#b7004f] hover:bg-[#f6f3f2] dark:hover:bg-stone-900 transition-all duration-200 active:scale-[0.98]" href="#">
+<span class="material-symbols-outlined" data-icon="group">group</span>
+<span class="text-sm">Audience</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 text-[#5a4045] dark:text-stone-400 hover:text-[#b7004f] hover:bg-[#f6f3f2] dark:hover:bg-stone-900 transition-all duration-200 active:scale-[0.98]" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="text-sm">Settings</span>
+</a>
+</nav>
+<div class="mt-auto pt-4">
+<button class="w-full signature-gradient text-white py-2.5 rounded-lg font-bold text-sm shadow-sm transition-transform active:scale-[0.95] flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="add">add</span>
+                Create Post
+            </button>
+<div class="mt-6 flex items-center gap-3 px-2">
+<img alt="Admin Workspace" class="w-8 h-8 rounded-full border border-outline-variant/30" data-alt="close up professional headshot of a minimalist workspace brand logo or avatar representing admin authority" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2ir0ie2tY-jJsficSIcwK7Ctz-DeYkLmhnvbAiOAEUFj1tAXng0lvrjfCvOWOQo6F3_2svTYUWo_xSQ9MiGNCwQTPHjCtQRofYS9jDxERvTbmppRUXOO4VjHICQmNFR67ooHTBjVJKSi7YOkoL0NmF3AkkJfYgipbrWO84OL_l8jkdcaLP6imDSLWBQ7sFL5SUERdGRJwzCXxcZcyAzNOquJTTVd60zmH6fbdNSiRDLrR-79TJuddOOAjIGiGZYJKjCE7DaLdYpPf"/>
+<div class="overflow-hidden">
+<p class="text-xs font-bold truncate">Admin Workspace</p>
+<p class="text-[10px] text-on-surface-variant truncate">Premium Account</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="ml-64 min-h-screen">
+<!-- TopAppBar -->
+<header class="fixed top-0 right-0 w-[calc(100%-16rem)] z-40 bg-[#fcf9f8]/80 dark:bg-stone-950/80 backdrop-blur-md flex justify-between items-center px-8 h-16 border-b border-[#e2bec3]/15">
+<div class="flex items-center flex-1">
+<div class="relative w-full max-w-md group">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-lg">search</span>
+<input class="w-full bg-surface-container-low border-none rounded-lg py-2 pl-10 pr-4 text-sm focus:ring-1 focus:ring-[#b7004f]/30 transition-all" placeholder="Search insights, content, or users..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-4 text-on-surface-variant">
+<button class="hover:text-[#b7004f] transition-colors"><span class="material-symbols-outlined" data-icon="notifications">notifications</span></button>
+<button class="hover:text-[#b7004f] transition-colors"><span class="material-symbols-outlined" data-icon="chat_bubble_outline">chat_bubble_outline</span></button>
+<button class="hover:text-[#b7004f] transition-colors"><span class="material-symbols-outlined" data-icon="account_circle">account_circle</span></button>
+</div>
+<div class="h-8 w-[1px] bg-outline-variant/30"></div>
+<img alt="User Profile" class="w-8 h-8 rounded-full ring-2 ring-offset-2 ring-primary/20" data-alt="minimalist profile picture of a young creative professional with a clean blurred studio background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0R_OQQxd1prUg0IKsVr2TwXQ0xdkEvmvt3a_UiYLfa6whAE8K9bXTT2N3MO8YC21b16yyx2ZIIrgMpmDPVX9CQAi_rkfpBFgV_U33ao6xYEjsGJOLtXNv-gOVj-Z4jsGAn5EhfwesPzvICP5wRQ5stsiTfheKgd9TGtW0_szr7rV7VzVViaHPP_02PXAqZgsVwY-FmyooHkrV7Ks2Nj7ggEhZ8L8Quwqn9shXYNN5c84JCBNXYCxNtGvM4VYnyMQwC4U_OWtgHVwu"/>
+</div>
+</header>
+<!-- Canvas Content -->
+<div class="pt-24 pb-12 px-8 max-w-7xl mx-auto space-y-8">
+<!-- Section 1: Growth Overview -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+<!-- Stat Card 1 -->
+<div class="bg-surface-container-lowest p-6 rounded-xl border border-outline-variant/10 transition-all hover:border-primary/20">
+<div class="flex items-center justify-between mb-4">
+<span class="text-on-surface-variant text-xs font-bold tracking-wider uppercase">Total Views</span>
+<span class="material-symbols-outlined text-primary" data-icon="visibility">visibility</span>
+</div>
+<div class="flex items-baseline gap-2">
+<h3 class="text-2xl font-black">1.2M</h3>
+<span class="text-xs font-bold text-green-600">+12%</span>
+</div>
+<div class="mt-4 h-1.5 w-full bg-surface-container-low rounded-full overflow-hidden">
+<div class="h-full signature-gradient w-[75%] rounded-full"></div>
+</div>
+</div>
+<!-- Stat Card 2 -->
+<div class="bg-surface-container-lowest p-6 rounded-xl border border-outline-variant/10 transition-all hover:border-primary/20">
+<div class="flex items-center justify-between mb-4">
+<span class="text-on-surface-variant text-xs font-bold tracking-wider uppercase">Engagement</span>
+<span class="material-symbols-outlined text-secondary" data-icon="favorite">favorite</span>
+</div>
+<div class="flex items-baseline gap-2">
+<h3 class="text-2xl font-black">84.2K</h3>
+<span class="text-xs font-bold text-green-600">+5.4%</span>
+</div>
+<div class="mt-4 h-1.5 w-full bg-surface-container-low rounded-full overflow-hidden">
+<div class="h-full signature-gradient w-[45%] rounded-full"></div>
+</div>
+</div>
+<!-- Stat Card 3 -->
+<div class="bg-surface-container-lowest p-6 rounded-xl border border-outline-variant/10 transition-all hover:border-primary/20">
+<div class="flex items-center justify-between mb-4">
+<span class="text-on-surface-variant text-xs font-bold tracking-wider uppercase">Conversions</span>
+<span class="material-symbols-outlined text-tertiary" data-icon="shopping_bag">shopping_bag</span>
+</div>
+<div class="flex items-baseline gap-2">
+<h3 class="text-2xl font-black">2.4K</h3>
+<span class="text-xs font-bold text-on-surface-variant">0.0%</span>
+</div>
+<div class="mt-4 h-1.5 w-full bg-surface-container-low rounded-full overflow-hidden">
+<div class="h-full signature-gradient w-[20%] rounded-full"></div>
+</div>
+</div>
+<!-- Stat Card 4 -->
+<div class="bg-surface-container-lowest p-6 rounded-xl border border-outline-variant/10 transition-all hover:border-primary/20">
+<div class="flex items-center justify-between mb-4">
+<span class="text-on-surface-variant text-xs font-bold tracking-wider uppercase">Subscribers</span>
+<span class="material-symbols-outlined text-on-surface" data-icon="star">star</span>
+</div>
+<div class="flex items-baseline gap-2">
+<h3 class="text-2xl font-black">15.8K</h3>
+<span class="text-xs font-bold text-primary">-2.1%</span>
+</div>
+<div class="mt-4 h-1.5 w-full bg-surface-container-low rounded-full overflow-hidden">
+<div class="h-full bg-on-surface-variant w-[60%] rounded-full"></div>
+</div>
+</div>
+</div>
+<!-- Section 2: Main Analytics Bento -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+<!-- Big Chart Card -->
+<div class="lg:col-span-2 bg-surface-container-lowest rounded-xl border border-outline-variant/10 p-8 flex flex-col">
+<div class="flex justify-between items-center mb-8">
+<div>
+<h2 class="text-lg font-bold">Growth Trends</h2>
+<p class="text-sm text-on-surface-variant">Daily performance across all channels</p>
+</div>
+<div class="flex bg-surface-container-low p-1 rounded-lg">
+<button class="px-4 py-1 text-xs font-bold bg-surface-container-lowest rounded-md shadow-sm">Week</button>
+<button class="px-4 py-1 text-xs font-bold text-on-surface-variant hover:text-on-surface transition-colors">Month</button>
+</div>
+</div>
+<div class="flex-1 min-h-[300px] relative">
+<!-- Simulated Chart Visual -->
+<div class="absolute inset-0 flex items-end justify-between gap-2 px-4">
+<div class="w-full signature-gradient opacity-10 rounded-t-lg h-[40%]"></div>
+<div class="w-full signature-gradient opacity-20 rounded-t-lg h-[65%]"></div>
+<div class="w-full signature-gradient opacity-30 rounded-t-lg h-[55%]"></div>
+<div class="w-full signature-gradient opacity-50 rounded-t-lg h-[85%]"></div>
+<div class="w-full signature-gradient opacity-70 rounded-t-lg h-[70%]"></div>
+<div class="w-full signature-gradient opacity-90 rounded-t-lg h-[95%]"></div>
+<div class="w-full signature-gradient rounded-t-lg h-[80%]"></div>
+</div>
+<div class="absolute inset-0 flex flex-col justify-between pointer-events-none">
+<div class="border-b border-outline-variant/10 w-full h-0"></div>
+<div class="border-b border-outline-variant/10 w-full h-0"></div>
+<div class="border-b border-outline-variant/10 w-full h-0"></div>
+<div class="border-b border-outline-variant/10 w-full h-0"></div>
+</div>
+</div>
+</div>
+<!-- Map / Access Points Card -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant/10 p-8">
+<div class="mb-6">
+<h2 class="text-lg font-bold">Access Points</h2>
+<p class="text-sm text-on-surface-variant">Global traffic distribution</p>
+</div>
+<div class="aspect-square bg-surface-container-low rounded-lg mb-6 overflow-hidden relative" data-location="New York" style="">
+<img alt="Global Heatmap" class="w-full h-full object-cover opacity-50 grayscale hover:grayscale-0 transition-all" data-alt="a stylized minimalist world map heatmap showing high density population centers in glowing pink and purple accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrblLn9vmh3shse0d3DWCa-kTlE93xYy1FE29DOFHnOB4yEwLodt4CEx6BdOdznJQdXQ2RNSC-TTZ_Gg-jvGGnh-5i6Hy1LpEGq9GtUDQ6F9rJjA6y5T5A3owsFUNkYVtyIA1wgKBTpzUxnAts9sFEmi5AEVFsJyfQoXhpUD-v6_1AnV_zqbjIwisXdUcLiEu9zcrj4-mlxkdPaRVFdqfhuBT3cMAks5Rhr_jnbqChSkF_lMj8Vsd0UUxhedmtlT6A0HQ-uyq1zUBq"/>
+<div class="absolute top-4 right-4 bg-surface-container-lowest/90 backdrop-blur px-3 py-1.5 rounded-full text-[10px] font-bold shadow-sm">Live Now: 1,402</div>
+</div>
+<div class="space-y-4">
+<div class="flex justify-between items-center">
+<div class="flex items-center gap-3">
+<div class="w-2 h-2 rounded-full bg-primary"></div>
+<span class="text-sm font-medium">United States</span>
+</div>
+<span class="text-sm font-bold">42%</span>
+</div>
+<div class="flex justify-between items-center">
+<div class="flex items-center gap-3">
+<div class="w-2 h-2 rounded-full bg-secondary"></div>
+<span class="text-sm font-medium">United Kingdom</span>
+</div>
+<span class="text-sm font-bold">18%</span>
+</div>
+<div class="flex justify-between items-center">
+<div class="flex items-center gap-3">
+<div class="w-2 h-2 rounded-full bg-tertiary"></div>
+<span class="text-sm font-medium">Germany</span>
+</div>
+<span class="text-sm font-bold">12%</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 3: Recent Activity Table -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant/10 overflow-hidden">
+<div class="px-8 py-6 flex justify-between items-center border-b border-outline-variant/10">
+<h2 class="text-lg font-bold">Recent Activity</h2>
+<button class="text-sm font-bold text-primary hover:text-secondary transition-colors">View All Logs</button>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead>
+<tr class="bg-surface-container-low/50 text-on-surface-variant text-[10px] uppercase tracking-widest font-bold">
+<th class="px-8 py-4">Author</th>
+<th class="px-8 py-4">Action</th>
+<th class="px-8 py-4">Entity</th>
+<th class="px-8 py-4">Status</th>
+<th class="px-8 py-4">Timestamp</th>
+</tr>
+</thead>
+<tbody class="text-sm divide-y divide-outline-variant/5">
+<tr class="hover:bg-surface-container-low/30 transition-colors">
+<td class="px-8 py-4 flex items-center gap-3">
+<img class="w-7 h-7 rounded-full" data-alt="avatar of a casual male professional in a modern office environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNOACG32wcfoffsIe8DghWsi8mXEJHen3J4Or9fnIIZ1XD_V59z8XgNdnW2LkQz9F_im2KSO0FCGv_14SJq3QYovACfPyCDjtyFoQI4eeUKnZYXA6aODtTYvvHgq9HaS8Zk0sAI0A1D9Q2l4-1v7nl517vuq-JR2O_Yr-Np3gPwjojjDCik9N8hal8wbIHs0BXid-s97zA1IRsfH2nelJlf71sQvcOqJUbTGmSBv_sN5t1hCT2XcHZWbRvgak_EQrWtb9mNJP2WAAW"/>
+<span class="font-semibold">Julianna D.</span>
+</td>
+<td class="px-8 py-4 text-on-surface-variant">Published Post</td>
+<td class="px-8 py-4 font-medium italic">"The Future of Minimal UI"</td>
+<td class="px-8 py-4">
+<span class="px-2.5 py-1 bg-green-100 text-green-700 text-[10px] font-bold rounded-full uppercase">Success</span>
+</td>
+<td class="px-8 py-4 text-on-surface-variant text-xs">2 mins ago</td>
+</tr>
+<tr class="hover:bg-surface-container-low/30 transition-colors">
+<td class="px-8 py-4 flex items-center gap-3">
+<img class="w-7 h-7 rounded-full" data-alt="avatar of a tech-focused professional with glasses in a bright creative studio" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZ5qUMU9lXzqAPqTribvwPzlrJHmDwjQjZVNd8HBeC5g6a56C8C2XHsogBODgeJM4lcFtgXEtJXfWoZ7TqWrAZIWFysyCBEAxTzn0U0QP9alLNjrJ1k3SttxVGu7IKVBJ5zG5LwGZETWYFhinjDZHgb0JNfjvrrlMtLIqJqAv6TQ1pxGcUrfsW7ew4YhO_6tKTsgShUDRNzzC7jrwILe0t5jmJL0IlVZyA8uQCkAL_pI-9zE56CzkASlgR7UPwSDPkWQaH-SjQIfQO"/>
+<span class="font-semibold">Marcus T.</span>
+</td>
+<td class="px-8 py-4 text-on-surface-variant">Modified Analytics</td>
+<td class="px-8 py-4 font-medium italic">Dashboard Customization</td>
+<td class="px-8 py-4">
+<span class="px-2.5 py-1 bg-blue-100 text-blue-700 text-[10px] font-bold rounded-full uppercase">Pending</span>
+</td>
+<td class="px-8 py-4 text-on-surface-variant text-xs">14 mins ago</td>
+</tr>
+<tr class="hover:bg-surface-container-low/30 transition-colors">
+<td class="px-8 py-4 flex items-center gap-3">
+<img class="w-7 h-7 rounded-full" data-alt="avatar of a smiling woman with a modern minimalist aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYNimbsSqU8LIhYdswjUbzG02-SjsVagdWskw8wLEPY8jKKQA10uLfg9OU3MNV4hkpbL_a9JtUznucE7wpal7bgHptvgvFBPdW5etXp6Dz7xSVu91gU3LOz2YJm1DFoxK9aOFqVF8nta4Qvz3k4hp47S12amfhGfmZie--unCNqTAMRp1BwirTFVWuifl6QSuYZeiSAmn4AYW8zMg9LKHIuEOMTGeZBVw7C94wmS8G1PVh1e2x_UossliLzFojdVnydJbpNmtyXU-j"/>
+<span class="font-semibold">Sarah K.</span>
+</td>
+<td class="px-8 py-4 text-on-surface-variant">Deleted Content</td>
+<td class="px-8 py-4 font-medium italic">Draft_Asset_v04.png</td>
+<td class="px-8 py-4">
+<span class="px-2.5 py-1 bg-red-100 text-red-700 text-[10px] font-bold rounded-full uppercase">Alert</span>
+</td>
+<td class="px-8 py-4 text-on-surface-variant text-xs">1 hour ago</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</main>
+<!-- Contextual FAB (Hidden on Mobile) -->
+<button class="md:flex fixed bottom-8 right-8 signature-gradient w-14 h-14 rounded-full items-center justify-center shadow-lg text-white hover:scale-110 active:scale-95 transition-all z-50">
+<span class="material-symbols-outlined font-variation-settings: 'FILL' 1;" data-icon="add">add</span>
+</button>
+</body></html>

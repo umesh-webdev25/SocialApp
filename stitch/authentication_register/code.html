@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sign Up • SocialApp</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "outline": "#8e6f74",
+                    "tertiary-container": "#cf4527",
+                    "primary": "#b7004f",
+                    "surface-tint": "#bb0452",
+                    "on-error": "#ffffff",
+                    "surface-container": "#f0eded",
+                    "surface-variant": "#e4e2e1",
+                    "on-primary-container": "#fffbff",
+                    "surface-container-highest": "#e4e2e1",
+                    "inverse-surface": "#303030",
+                    "surface-dim": "#dcd9d9",
+                    "on-primary-fixed": "#3f0017",
+                    "on-secondary-fixed-variant": "#6a1c9b",
+                    "error-container": "#ffdad6",
+                    "on-error-container": "#93000a",
+                    "background": "#fcf9f8",
+                    "secondary-fixed": "#f4daff",
+                    "on-secondary-fixed": "#2f004c",
+                    "primary-fixed": "#ffd9df",
+                    "secondary": "#833ab4",
+                    "surface": "#fcf9f8",
+                    "on-tertiary-container": "#fffbff",
+                    "error": "#ba1a1a",
+                    "secondary-container": "#cb80fe",
+                    "on-primary-fixed-variant": "#90003d",
+                    "primary-container": "#da2a67",
+                    "outline-variant": "#e2bec3",
+                    "on-surface-variant": "#5a4045",
+                    "on-surface": "#1b1c1c",
+                    "tertiary": "#ac2c11",
+                    "inverse-primary": "#ffb1c0",
+                    "primary-fixed-dim": "#ffb1c0",
+                    "on-tertiary-fixed": "#3d0600",
+                    "on-secondary": "#ffffff",
+                    "surface-container-high": "#eae7e7",
+                    "on-primary": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "secondary-fixed-dim": "#e3b5ff",
+                    "on-secondary-container": "#580088",
+                    "tertiary-fixed": "#ffdad3",
+                    "surface-bright": "#fcf9f8",
+                    "on-background": "#1b1c1c",
+                    "on-tertiary-fixed-variant": "#8c1800",
+                    "surface-container-lowest": "#ffffff",
+                    "inverse-on-surface": "#f3f0ef",
+                    "tertiary-fixed-dim": "#ffb4a4",
+                    "surface-container-low": "#f6f3f2"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Inter"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .signature-gradient {
+            background: linear-gradient(to right, #b7004f, #833ab4, #ac2c11);
+        }
+        .ghost-border {
+            outline: 1px solid rgba(226, 190, 195, 0.25);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface min-h-screen flex flex-col items-center justify-center p-4">
+<!-- Main Registration Container -->
+<main class="w-full max-w-[350px] flex flex-col gap-3">
+<!-- Registration Card -->
+<section class="bg-surface-container-lowest ghost-border rounded-lg p-10 flex flex-col items-center">
+<!-- Brand Logo from JSON style -->
+<h1 class="text-2xl font-bold tracking-tight bg-gradient-to-r from-[#b7004f] via-[#833ab4] to-[#ac2c11] bg-clip-text text-transparent mb-4">
+                SocialApp
+            </h1>
+<p class="text-on-surface-variant font-semibold text-center text-md mb-6 leading-tight">
+                Sign up to see photos and videos from your friends.
+            </p>
+<!-- Social Login -->
+<button class="w-full py-2 px-4 bg-primary text-white rounded-lg font-semibold flex items-center justify-center gap-2 mb-6 hover:opacity-90 transition-opacity active:scale-95">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">social_leaderboard</span>
+<span class="text-sm">Log in with Facebook</span>
+</button>
+<!-- Divider -->
+<div class="w-full flex items-center gap-4 mb-6">
+<div class="h-[1px] flex-1 bg-surface-container-highest"></div>
+<span class="text-[12px] font-bold text-on-surface-variant uppercase tracking-wider">OR</span>
+<div class="h-[1px] flex-1 bg-surface-container-highest"></div>
+</div>
+<!-- Form -->
+<form class="w-full flex flex-col gap-2">
+<div class="relative">
+<input class="w-full bg-surface-container-low border-none focus:ring-1 focus:ring-primary rounded-sm py-2 px-3 text-sm placeholder:text-on-surface-variant/60" placeholder="Email" type="email"/>
+</div>
+<div class="relative">
+<input class="w-full bg-surface-container-low border-none focus:ring-1 focus:ring-primary rounded-sm py-2 px-3 text-sm placeholder:text-on-surface-variant/60" placeholder="Full Name" type="text"/>
+</div>
+<div class="relative">
+<input class="w-full bg-surface-container-low border-none focus:ring-1 focus:ring-primary rounded-sm py-2 px-3 text-sm placeholder:text-on-surface-variant/60" placeholder="Username" type="text"/>
+</div>
+<div class="relative">
+<input class="w-full bg-surface-container-low border-none focus:ring-1 focus:ring-primary rounded-sm py-2 px-3 text-sm placeholder:text-on-surface-variant/60" placeholder="Password" type="password"/>
+</div>
+<div class="mt-2 text-[12px] text-on-surface-variant text-center leading-4 px-2">
+                    People who use our service may have uploaded your contact information to SocialApp. <a class="font-semibold text-primary" href="#">Learn More</a>
+</div>
+<div class="mt-4 text-[12px] text-on-surface-variant text-center leading-4 px-2">
+                    By signing up, you agree to our <a class="font-semibold text-primary" href="#">Terms</a>, <a class="font-semibold text-primary" href="#">Privacy Policy</a> and <a class="font-semibold text-primary" href="#">Cookies Policy</a>.
+                </div>
+<button class="signature-gradient text-white font-semibold py-2 rounded-lg mt-4 active:scale-95 transition-transform" type="submit">
+                    Sign Up
+                </button>
+</form>
+</section>
+<!-- Login Redirect Card -->
+<section class="bg-surface-container-lowest ghost-border rounded-lg py-6 flex items-center justify-center">
+<p class="text-sm text-on-surface">
+                Have an account? <a class="text-primary font-semibold" href="#">Log In</a>
+</p>
+</section>
+<!-- App Store Badges -->
+<section class="flex flex-col items-center gap-4 mt-2">
+<p class="text-sm text-on-surface">Get the app.</p>
+<div class="flex gap-2">
+<img alt="App Store" class="h-10" data-alt="Official Apple App Store download badge with black background and white logo text" src="https://lh3.googleusercontent.com/aida-public/AB6AXuABnDe0Df44agfJPK6q9mHHqNTNsQqSZ0yDqXOSlnRAfL_8cHtwReQVSJWIBOou1mr6fPNpdxoCHyypbpqUqqQxArHxPgraMzP291Ux68qWkAM5DsUeTEpbDvkBdcJ8532yCfvKM7HYhn1YqxmUr7G2R_lnsjwIIVV_uRH6393iW-cqJpx-fQ369f9A5hHR1Wgj_ldwNsmmLH97odmV7DHULjLY3axoqkKREOWChGGOXI0fZtyEramQMeZkBZO-qScHqfO2WS776_aV"/>
+<img alt="Google Play" class="h-10" data-alt="Official Google Play Store download badge with black background and colorful play icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMemRG4rsAMvoxe2bR5ADInVvXJkrL0imP_dFgsb4qRFsixoiW2EU-IVty0xQH7JlGuuRZR8RJu-8pZKGUFpV6Rx890IoqHqitAY-9CoASqa492AaWPbQZ7S7d--PKETyVa90M2QcYGIU_-sP160SSYKCOHJ26_I2kGRsjk7BliRW_YqlDDleBP-x1mv__khrnxEel3atCde-OdPrVaMQgrlPdniLj4g93aMEEHuj92I1W_HiSQJMu5ewMY0XFPMacFml12mw-IE4U"/>
+</div>
+</section>
+</main>
+<!-- Footer Links -->
+<footer class="mt-12 w-full max-w-4xl px-4 flex flex-wrap justify-center gap-x-4 gap-y-2 pb-8">
+<a class="text-[12px] text-on-surface-variant hover:underline" href="#">Meta</a>
+<a class="text-[12px] text-on-surface-variant hover:underline" href="#">About</a>
+<a class="text-[12px] text-on-surface-variant hover:underline" href="#">Blog</a>
+<a class="text-[12px] text-on-surface-variant hover:underline" href="#">Jobs</a>
+<a class="text-[12px] text-on-surface-variant hover:underline" href="#">Help</a>
+<a class="text-[12px] text-on-surface-variant hover:underline" href="#">API</a>
+<a class="text-[12px] text-on-surface-variant hover:underline" href="#">Privacy</a>
+<a class="text-[12px] text-on-surface-variant hover:underline" href="#">Terms</a>
+<a class="text-[12px] text-on-surface-variant hover:underline" href="#">Top Accounts</a>
+<a class="text-[12px] text-on-surface-variant hover:underline" href="#">Locations</a>
+<a class="text-[12px] text-on-surface-variant hover:underline" href="#">SocialApp Lite</a>
+<a class="text-[12px] text-on-surface-variant hover:underline" href="#">Contact Uploading &amp; Non-Users</a>
+<div class="w-full flex justify-center gap-4 mt-4">
+<span class="text-[12px] text-on-surface-variant">English</span>
+<span class="text-[12px] text-on-surface-variant">© 2024 SocialApp from Meta</span>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Create Post | Editorial</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-fixed": "#ffd9df",
+                        "on-error-container": "#93000a",
+                        "background": "#fcf9f8",
+                        "inverse-on-surface": "#f3f0ef",
+                        "primary-fixed-dim": "#ffb1c0",
+                        "on-primary-container": "#fffbff",
+                        "tertiary-container": "#cf4527",
+                        "secondary-fixed-dim": "#e3b5ff",
+                        "surface": "#fcf9f8",
+                        "on-surface": "#1b1c1c",
+                        "on-secondary": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "surface-container": "#f0eded",
+                        "on-tertiary": "#ffffff",
+                        "primary": "#b7004f",
+                        "surface-container-lowest": "#ffffff",
+                        "on-background": "#1b1c1c",
+                        "error": "#ba1a1a",
+                        "outline": "#8e6f74",
+                        "on-tertiary-container": "#fffbff",
+                        "on-tertiary-fixed": "#3d0600",
+                        "surface-variant": "#e4e2e1",
+                        "on-primary-fixed": "#3f0017",
+                        "secondary-container": "#cb80fe",
+                        "on-primary-fixed-variant": "#90003d",
+                        "surface-container-high": "#eae7e7",
+                        "surface-bright": "#fcf9f8",
+                        "on-secondary-fixed-variant": "#6a1c9b",
+                        "tertiary-fixed": "#ffdad3",
+                        "primary-container": "#da2a67",
+                        "on-secondary-fixed": "#2f004c",
+                        "surface-container-low": "#f6f3f2",
+                        "inverse-surface": "#303030",
+                        "tertiary-fixed-dim": "#ffb4a4",
+                        "on-secondary-container": "#580088",
+                        "inverse-primary": "#ffb1c0",
+                        "surface-container-highest": "#e4e2e1",
+                        "surface-dim": "#dcd9d9",
+                        "outline-variant": "#e2bec3",
+                        "tertiary": "#ac2c11",
+                        "surface-tint": "#bb0452",
+                        "secondary": "#833ab4",
+                        "secondary-fixed": "#f4daff",
+                        "on-tertiary-fixed-variant": "#8c1800",
+                        "on-error": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "on-surface-variant": "#5a4045"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .editorial-gradient {
+            background: linear-gradient(to right, #b7004f, #833ab4, #ac2c11);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- SideNavBar (Shared Component) -->
+<nav class="fixed left-0 top-0 hidden md:flex flex-col p-6 h-full bg-[#fcf9f8] dark:bg-stone-900 h-screen w-64 border-r-0 z-50">
+<div class="mb-10 px-4">
+<h1 class="text-xl font-bold text-[#b7004f]">Editorial</h1>
+<p class="text-xs text-on-surface-variant opacity-70">The Lens</p>
+</div>
+<div class="flex flex-col gap-1">
+<a class="flex items-center gap-3 text-[#5a4045] dark:text-stone-400 py-3 px-4 hover:bg-[#f6f3f2] dark:hover:bg-stone-800 rounded-lg transition-colors font-inter text-sm tracking-tight" href="#">
+<span class="material-symbols-outlined">home</span>
+                Home
+            </a>
+<a class="flex items-center gap-3 text-[#5a4045] dark:text-stone-400 py-3 px-4 hover:bg-[#f6f3f2] dark:hover:bg-stone-800 rounded-lg transition-colors font-inter text-sm tracking-tight" href="#">
+<span class="material-symbols-outlined">explore</span>
+                Explore
+            </a>
+<a class="flex items-center gap-3 text-[#b7004f] dark:text-[#e1306c] font-semibold py-3 px-4 bg-[#ffffff] dark:bg-stone-800 rounded-lg font-inter text-sm tracking-tight" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">add_box</span>
+                Create
+            </a>
+<a class="flex items-center gap-3 text-[#5a4045] dark:text-stone-400 py-3 px-4 hover:bg-[#f6f3f2] dark:hover:bg-stone-800 rounded-lg transition-colors font-inter text-sm tracking-tight" href="#">
+<span class="material-symbols-outlined">mail</span>
+                Messages
+            </a>
+<a class="flex items-center gap-3 text-[#5a4045] dark:text-stone-400 py-3 px-4 hover:bg-[#f6f3f2] dark:hover:bg-stone-800 rounded-lg transition-colors font-inter text-sm tracking-tight" href="#">
+<span class="material-symbols-outlined">person</span>
+                Profile
+            </a>
+</div>
+<div class="mt-auto px-4">
+<button class="w-full editorial-gradient text-white font-bold py-3 px-4 rounded-lg active:opacity-80 transition-opacity font-inter text-sm shadow-lg shadow-primary/20">
+                New Post
+            </button>
+</div>
+</nav>
+<!-- Main Canvas Area -->
+<main class="md:ml-64 min-h-screen flex items-center justify-center p-4 md:p-8">
+<!-- Post Creation Modal/Card -->
+<div class="bg-surface-container-lowest w-full max-w-[960px] rounded-2xl overflow-hidden flex flex-col md:flex-row shadow-[0_12px_32px_rgba(27,28,28,0.06)] border border-outline-variant/10">
+<!-- Left Column: Media Upload -->
+<div class="w-full md:w-3/5 bg-surface-container-low aspect-square md:aspect-auto flex flex-col items-center justify-center relative p-8 border-r border-outline-variant/5">
+<div class="w-full h-full border-2 border-dashed border-outline-variant/30 rounded-xl flex flex-col items-center justify-center gap-4 hover:bg-surface-container-high transition-colors cursor-pointer group">
+<div class="w-16 h-16 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl">photo_library</span>
+</div>
+<div class="text-center">
+<p class="font-semibold text-on-surface">Drag photos and videos here</p>
+<p class="text-sm text-on-surface-variant mt-1">High-resolution editorial content preferred</p>
+</div>
+<button class="mt-4 px-6 py-2 bg-primary text-white font-semibold rounded-lg text-sm hover:opacity-90 active:scale-95 transition-all">
+                        Select from computer
+                    </button>
+</div>
+</div>
+<!-- Right Column: Metadata & Details -->
+<div class="w-full md:w-2/5 flex flex-col h-full bg-surface-container-lowest">
+<!-- Header -->
+<div class="p-4 flex items-center justify-between border-b border-outline-variant/5">
+<h2 class="text-sm font-bold tracking-tight uppercase text-on-surface-variant/80">Create New Post</h2>
+<button class="text-primary font-bold text-sm hover:opacity-70 transition-opacity">Drafts</button>
+</div>
+<div class="flex-1 overflow-y-auto">
+<!-- User Profile Header -->
+<div class="p-4 flex items-center gap-3">
+<div class="w-8 h-8 rounded-full editorial-gradient p-[2px]">
+<img alt="User Avatar" class="w-full h-full rounded-full object-cover border-2 border-white" data-alt="Close-up portrait of a stylish woman with confident expression, soft editorial studio lighting, clean background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAomtc7Xyo-KS9BGkHPJhvwCHpS08sw7Wyh62a_VBPVjA1RxFYqsBQpHkllZivAJdfEBMyifeAonodbutXdvak3xyZGWq6JnpKrC1oMLzggYmwU509SLBnLKGXTE8mNrEMwE7V7LOJTWn07zj05ru6gSw5xpZiW48mcyobxd_2geglSH1svq-7qzZd3HMJtn0x1qetGZcfidS7HbRyOnyaa4aWs1wnjXu3a7cq31B0h5-3MqD_9uTp-qTKA9kJLNnvFItJW8ypxwLrF"/>
+</div>
+<span class="font-bold text-sm text-on-surface">alexandra_vogue</span>
+</div>
+<!-- Caption Area -->
+<div class="px-4">
+<textarea class="w-full h-40 bg-transparent border-none focus:ring-0 resize-none text-sm placeholder:text-on-surface-variant/50 p-0" placeholder="Write a caption..."></textarea>
+</div>
+<!-- Interactions & Tools -->
+<div class="px-4 flex items-center justify-between py-2 mb-4">
+<button class="text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-xl">sentiment_satisfied</span>
+</button>
+<span class="text-[10px] text-on-surface-variant/40 font-medium">0/2200</span>
+</div>
+<!-- Utility Sections -->
+<div class="flex flex-col">
+<!-- Add Location -->
+<div class="px-4 py-3 flex items-center justify-between border-t border-outline-variant/5 hover:bg-surface-container-low transition-colors cursor-pointer group">
+<div class="flex items-center gap-3 flex-1">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">location_on</span>
+<input class="bg-transparent border-none focus:ring-0 p-0 text-sm w-full placeholder:text-on-surface-variant/60" placeholder="Add location" type="text"/>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant/40">chevron_right</span>
+</div>
+<!-- Tag People -->
+<div class="px-4 py-3 flex items-center justify-between border-t border-outline-variant/5 hover:bg-surface-container-low transition-colors cursor-pointer group">
+<div class="flex items-center gap-3 flex-1">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">person_add</span>
+<input class="bg-transparent border-none focus:ring-0 p-0 text-sm w-full placeholder:text-on-surface-variant/60" placeholder="Tag people" type="text"/>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant/40">chevron_right</span>
+</div>
+<!-- Advanced Settings Toggle -->
+<div class="px-4 py-3 flex items-center justify-between border-t border-outline-variant/5 hover:bg-surface-container-low transition-colors cursor-pointer group">
+<div class="flex flex-col">
+<span class="text-sm font-medium text-on-surface">Advanced settings</span>
+<span class="text-[11px] text-on-surface-variant/60">Accessibility, Comments, Alt text</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant/40">expand_more</span>
+</div>
+</div>
+</div>
+<!-- Footer Action -->
+<div class="p-4 mt-auto">
+<button class="w-full editorial-gradient text-white font-bold py-3.5 rounded-xl active:scale-[0.98] transition-all shadow-xl shadow-primary/20">
+                        Share Post
+                    </button>
+<p class="text-center text-[10px] text-on-surface-variant/40 mt-3 px-4">
+                        By sharing, you agree to our Editorial Content Guidelines and Terms of Service.
+                    </p>
+</div>
+</div>
+</div>
+<!-- Floating decorative element -->
+<div class="fixed bottom-10 right-10 hidden xl:block">
+<div class="bg-surface-container-lowest/40 backdrop-blur-xl p-4 rounded-2xl border border-white/20 shadow-2xl max-w-[200px]">
+<p class="text-[10px] font-bold uppercase tracking-widest text-primary mb-2">Editorial Tip</p>
+<p class="text-xs text-on-surface-variant leading-relaxed">
+                    High contrast and intentional whitespace help your content stand out in the feed.
+                </p>
+</div>
+</div>
+</main>
+<!-- BottomNavBar (Shared Component - Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 w-full z-50 rounded-t-2xl bg-[#fcf9f8]/80 backdrop-blur-md flex justify-around items-center px-4 py-3 shadow-[0_-4px_20px_rgba(0,0,0,0.03)] border-t border-outline-variant/10">
+<a class="flex flex-col items-center justify-center text-[#5a4045] dark:text-stone-500 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] uppercase tracking-widest font-bold mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#5a4045] dark:text-stone-500 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined">search</span>
+<span class="text-[10px] uppercase tracking-widest font-bold mt-1">Search</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#b7004f] dark:text-[#e1306c] active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">add_circle</span>
+<span class="text-[10px] uppercase tracking-widest font-bold mt-1">Add</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#5a4045] dark:text-stone-500 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined">favorite</span>
+<span class="text-[10px] uppercase tracking-widest font-bold mt-1">Activity</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#5a4045] dark:text-stone-500 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined">account_circle</span>
+<span class="text-[10px] uppercase tracking-widest font-bold mt-1">Profile</span>
+</a>
+</nav>
+</body></html>

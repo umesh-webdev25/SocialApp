@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed-dim": "#ffb4a4",
+                    "surface-dim": "#dcd9d9",
+                    "surface-container-low": "#f6f3f2",
+                    "background": "#fcf9f8",
+                    "tertiary-container": "#cf4527",
+                    "primary-fixed-dim": "#ffb1c0",
+                    "primary-fixed": "#ffd9df",
+                    "tertiary-fixed": "#ffdad3",
+                    "surface-container": "#f0eded",
+                    "on-primary": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "on-tertiary-fixed-variant": "#8c1800",
+                    "on-background": "#1b1c1c",
+                    "outline": "#8e6f74",
+                    "tertiary": "#ac2c11",
+                    "surface-container-high": "#eae7e7",
+                    "inverse-primary": "#ffb1c0",
+                    "on-tertiary-fixed": "#3d0600",
+                    "surface-container-highest": "#e4e2e1",
+                    "on-surface-variant": "#5a4045",
+                    "on-primary-fixed-variant": "#90003d",
+                    "on-error-container": "#93000a",
+                    "outline-variant": "#e2bec3",
+                    "secondary-container": "#cb80fe",
+                    "primary": "#b7004f",
+                    "on-primary-fixed": "#3f0017",
+                    "surface-variant": "#e4e2e1",
+                    "inverse-surface": "#303030",
+                    "on-secondary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "surface-tint": "#bb0452",
+                    "on-tertiary": "#ffffff",
+                    "on-primary-container": "#fffbff",
+                    "secondary-fixed-dim": "#e3b5ff",
+                    "secondary-fixed": "#f4daff",
+                    "secondary": "#833ab4",
+                    "on-tertiary-container": "#fffbff",
+                    "surface-bright": "#fcf9f8",
+                    "surface": "#fcf9f8",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary-fixed-variant": "#6a1c9b",
+                    "on-secondary-container": "#580088",
+                    "on-surface": "#1b1c1c",
+                    "on-secondary-fixed": "#2f004c",
+                    "inverse-on-surface": "#f3f0ef",
+                    "error": "#ba1a1a",
+                    "primary-container": "#da2a67"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Inter"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body antialiased">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#fcf9f8]/80 dark:bg-stone-900/80 backdrop-blur-md flex justify-between items-center px-6 h-16 w-full">
+<div class="flex items-center gap-8">
+<span class="text-2xl font-bold bg-gradient-to-r from-[#b7004f] via-[#833ab4] to-[#ac2c11] bg-clip-text text-transparent">Editorial</span>
+<div class="hidden md:flex items-center bg-surface-container-highest px-4 py-1.5 rounded-lg group">
+<span class="material-symbols-outlined text-on-surface-variant text-sm mr-2" data-icon="search">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-48 placeholder:text-on-surface-variant" placeholder="Search" type="text"/>
+</div>
+</div>
+<nav class="flex items-center gap-6">
+<button class="material-symbols-outlined text-[#5a4045] dark:text-stone-400 hover:bg-[#f6f3f2] dark:hover:bg-stone-800 transition-colors duration-200 p-2 rounded-full active:scale-95" data-icon="favorite">favorite</button>
+<button class="material-symbols-outlined text-[#5a4045] dark:text-stone-400 hover:bg-[#f6f3f2] dark:hover:bg-stone-800 transition-colors duration-200 p-2 rounded-full active:scale-95" data-icon="chat_bubble">chat_bubble</button>
+<div class="w-8 h-8 rounded-full bg-surface-container-highest overflow-hidden ring-2 ring-primary">
+<img alt="User profile" class="w-full h-full object-cover" data-alt="Close-up portrait of a young woman with a stylish haircut against a minimalist background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUKAw0PgWhzfgWd9g9328S_YVlV_iS37XgCeUnMNNiuY5mznY4BOGaaBByzJbbqIIKN8kKG5Tb3zKGBx0aoywAoBcnBu9Et1MGiW9755dEVcYfRg_KSBsjc0KyHIBouMlSVuFQ18L1uMYfwlUWgTeTEO1KlwinJpQTCxtupGfDDUpAeGEF4yNHOengtUuawDbk_j7nTYwXbmOq3HO3rsvYAZ64K94wGLUjW4XgG_cSX0oSM5HRDwqy7DxfoA25IdKauU6eCD1HrmQr"/>
+</div>
+</nav>
+</header>
+<!-- SideNavBar (Desktop) -->
+<aside class="hidden md:flex fixed left-0 h-full w-64 border-r border-[#e4e2e1] dark:border-stone-800 bg-[#fcf9f8] dark:bg-stone-950 flex flex-col p-6 gap-y-2 mt-16">
+<nav class="flex flex-col gap-1">
+<a class="flex items-center gap-4 px-4 py-3 text-[#5a4045] dark:text-stone-400 hover:bg-[#f6f3f2] dark:hover:bg-stone-900 rounded-lg transition-all duration-200 group" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-medium">Home</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 text-[#5a4045] dark:text-stone-400 hover:bg-[#f6f3f2] dark:hover:bg-stone-900 rounded-lg transition-all duration-200 group" href="#">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+<span class="font-medium">Search</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 text-[#5a4045] dark:text-stone-400 hover:bg-[#f6f3f2] dark:hover:bg-stone-900 rounded-lg transition-all duration-200 group" href="#">
+<span class="material-symbols-outlined" data-icon="explore">explore</span>
+<span class="font-medium">Explore</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 text-[#5a4045] dark:text-stone-400 hover:bg-[#f6f3f2] dark:hover:bg-stone-900 rounded-lg transition-all duration-200 group" href="#">
+<span class="material-symbols-outlined" data-icon="movie">movie</span>
+<span class="font-medium">Reels</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 text-[#5a4045] dark:text-stone-400 hover:bg-[#f6f3f2] dark:hover:bg-stone-900 rounded-lg transition-all duration-200 group" href="#">
+<span class="material-symbols-outlined" data-icon="mail">mail</span>
+<span class="font-medium">Messages</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 text-[#5a4045] dark:text-stone-400 hover:bg-[#f6f3f2] dark:hover:bg-stone-900 rounded-lg transition-all duration-200 group" href="#">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+<span class="font-medium">Notifications</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 text-[#b7004f] dark:text-[#f33b82] font-bold bg-[#f6f3f2] dark:bg-stone-900 rounded-lg transition-all duration-200 group" href="#">
+<span class="material-symbols-outlined" data-icon="settings" style="font-variation-settings: 'FILL' 1;">settings</span>
+<span class="font-medium">Settings</span>
+</a>
+</nav>
+</aside>
+<!-- Main Content -->
+<main class="md:pl-64 pt-24 pb-12 px-4 flex justify-center min-h-screen">
+<div class="w-full max-w-[900px] flex gap-0 bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm ring-1 ring-outline-variant/20">
+<!-- Settings Sub-Navigation -->
+<aside class="hidden lg:flex flex-col w-72 border-r border-outline-variant/10 py-6">
+<h2 class="px-8 text-xl font-bold mb-6">Settings</h2>
+<nav class="flex flex-col">
+<a class="px-8 py-3 text-sm font-medium text-on-surface-variant hover:bg-surface-container-low transition-colors" href="#">Edit Profile</a>
+<a class="px-8 py-3 text-sm font-medium text-on-surface-variant hover:bg-surface-container-low transition-colors" href="#">Professional account</a>
+<a class="px-8 py-3 text-sm font-bold text-primary border-l-2 border-primary bg-surface-container-low transition-colors" href="#">Privacy and safety</a>
+<a class="px-8 py-3 text-sm font-medium text-on-surface-variant hover:bg-surface-container-low transition-colors" href="#">Security</a>
+<a class="px-8 py-3 text-sm font-medium text-on-surface-variant hover:bg-surface-container-low transition-colors" href="#">Notifications</a>
+<a class="px-8 py-3 text-sm font-medium text-on-surface-variant hover:bg-surface-container-low transition-colors" href="#">Ads</a>
+<a class="px-8 py-3 text-sm font-medium text-on-surface-variant hover:bg-surface-container-low transition-colors" href="#">Help</a>
+</nav>
+</aside>
+<!-- Privacy Section Content -->
+<section class="flex-1 p-8 md:p-12">
+<header class="mb-10">
+<h1 class="text-2xl font-bold tracking-tight mb-2">Privacy and safety</h1>
+<p class="text-on-surface-variant text-sm">Manage who can see your content and how people can interact with you.</p>
+</header>
+<div class="space-y-12">
+<!-- Account Privacy -->
+<div class="space-y-4">
+<h3 class="text-sm font-bold uppercase tracking-wider text-on-surface-variant/70">Account Privacy</h3>
+<div class="flex items-center justify-between py-2">
+<div>
+<p class="font-semibold">Private Account</p>
+<p class="text-xs text-on-surface-variant mt-1 max-w-sm leading-relaxed">When your account is private, only people you approve can see your photos and videos on Editorial.</p>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+</div>
+<!-- Interactions -->
+<div class="space-y-6">
+<h3 class="text-sm font-bold uppercase tracking-wider text-on-surface-variant/70">Interactions</h3>
+<div class="flex items-center justify-between py-2">
+<div>
+<p class="font-semibold">Activity Status</p>
+<p class="text-xs text-on-surface-variant mt-1 max-w-sm leading-relaxed">Allow accounts you follow and anyone you message to see when you were last active.</p>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<a class="flex items-center justify-between py-2 group" href="#">
+<div>
+<p class="font-semibold group-hover:text-primary transition-colors">Story Sharing</p>
+<p class="text-xs text-on-surface-variant mt-1 leading-relaxed">Choose who can share your stories as a message.</p>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="chevron_right">chevron_right</span>
+</a>
+<a class="flex items-center justify-between py-2 group" href="#">
+<div>
+<p class="font-semibold group-hover:text-primary transition-colors">Comment Filtering</p>
+<p class="text-xs text-on-surface-variant mt-1 leading-relaxed">Hide offensive comments and set manual keyword filters.</p>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="chevron_right">chevron_right</span>
+</a>
+</div>
+<!-- Blocked Accounts -->
+<div class="space-y-6">
+<h3 class="text-sm font-bold uppercase tracking-wider text-on-surface-variant/70">Connections</h3>
+<div class="bg-surface-container-low rounded-xl p-6">
+<div class="flex items-center justify-between mb-6">
+<h4 class="font-semibold">Blocked Accounts</h4>
+<span class="text-xs font-bold text-primary cursor-pointer hover:underline">Add New</span>
+</div>
+<div class="space-y-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest overflow-hidden">
+<img alt="Blocked User" class="w-full h-full object-cover" data-alt="Portrait of a man with a beard and serious expression in soft studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHwOlu6I8uysW7Bh7IkUI0jk3Rqlzov2arYyKGQkWN_qsHJV6q47h2gGhcmMvnUvtLSNlIprHGVA3yz-o_NXWhAegMUccF7eaBao_IFb2-oM8IxXKy9ua9C5MFrdccfu9UKLUDyb7AyTuKMGXon91iPZNCQ75CcbSBxV6s9V1UMbOFOLCVzzxZV2jOp8OZOUKJCd9wKeFV4sYMp_p64LyU8beCT-5R4xZZE14HzvNSotncPLsSbRiwKaOTXzrR85vWdpKmEFheSnPQ"/>
+</div>
+<div>
+<p class="text-sm font-bold">shadow_walker</p>
+<p class="text-[10px] text-on-surface-variant">Blocked Nov 12, 2023</p>
+</div>
+</div>
+<button class="px-4 py-1.5 text-xs font-bold text-on-surface-variant bg-surface-container-highest rounded-lg hover:bg-outline-variant/30 transition-colors">Unblock</button>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest overflow-hidden">
+<img alt="Blocked User" class="w-full h-full object-cover" data-alt="Close-up of a smiling woman with glasses and colorful scarf in an urban setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBomfgcl_xP2ycPnxnmtGZ9MCOfNOrAT5AYUEdFgFAlFekKX_efKEh26F-JhBBm4I4rxK80sU7fLqy-w_zuyUBpDz-zStqtqIvEsef8ZvnLPLTjpXFsrenyFZPXhZaY6WrLxtxIj06zWywYcrC3N-ucElGECJJ1gvj8mKrEWV0R919ppnctFBTMyM5WitNOetNubKTc7sebUOAF-DUZU7807YTplCZ0qj63mYAtqSbtZIhSzCHUgF6acKpVamU4qZ2F0nxQ-axLErDg"/>
+</div>
+<div>
+<p class="text-sm font-bold">urban_legend_99</p>
+<p class="text-[10px] text-on-surface-variant">Blocked Oct 05, 2023</p>
+</div>
+</div>
+<button class="px-4 py-1.5 text-xs font-bold text-on-surface-variant bg-surface-container-highest rounded-lg hover:bg-outline-variant/30 transition-colors">Unblock</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer Action -->
+<div class="pt-6 border-t border-outline-variant/10">
+<button class="w-full py-4 bg-gradient-to-r from-primary to-secondary text-on-primary font-bold rounded-xl active:scale-[0.98] transition-all shadow-lg shadow-primary/20">Save All Changes</button>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- BottomNavBar (Mobile) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full bg-[#fcf9f8]/80 dark:bg-stone-900/80 backdrop-blur-md flex justify-around items-center h-16 z-50">
+<button class="material-symbols-outlined text-[#5a4045] dark:text-stone-400" data-icon="home">home</button>
+<button class="material-symbols-outlined text-[#5a4045] dark:text-stone-400" data-icon="search">search</button>
+<button class="material-symbols-outlined text-[#5a4045] dark:text-stone-400" data-icon="add_box">add_box</button>
+<button class="material-symbols-outlined text-[#5a4045] dark:text-stone-400" data-icon="movie">movie</button>
+<button class="material-symbols-outlined text-[#b7004f] font-semibold" data-icon="settings" style="font-variation-settings: 'FILL' 1;">settings</button>
+</nav>
+</body></html>

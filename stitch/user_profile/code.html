@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Editorial Lens | Profile</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .signature-gradient {
+            background: linear-gradient(45deg, #b7004f, #833ab4, #ac2c11);
+        }
+        .signature-border {
+            background: linear-gradient(white, white) padding-box,
+                        linear-gradient(45deg, #b7004f, #833ab4, #ac2c11) border-box;
+            border: 3px solid transparent;
+        }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "secondary": "#833ab4",
+                      "surface-container-high": "#eae7e7",
+                      "tertiary-fixed": "#ffdad3",
+                      "surface-container": "#f0eded",
+                      "on-secondary": "#ffffff",
+                      "outline": "#8e6f74",
+                      "on-secondary-container": "#580088",
+                      "on-primary-container": "#fffbff",
+                      "secondary-fixed": "#f4daff",
+                      "primary-fixed": "#ffd9df",
+                      "tertiary-fixed-dim": "#ffb4a4",
+                      "surface-dim": "#dcd9d9",
+                      "surface": "#fcf9f8",
+                      "on-tertiary-container": "#fffbff",
+                      "primary": "#b7004f",
+                      "primary-container": "#da2a67",
+                      "tertiary": "#ac2c11",
+                      "on-surface-variant": "#5a4045",
+                      "on-tertiary-fixed-variant": "#8c1800",
+                      "on-secondary-fixed": "#2f004c",
+                      "inverse-primary": "#ffb1c0",
+                      "inverse-on-surface": "#f3f0ef",
+                      "tertiary-container": "#cf4527",
+                      "on-primary-fixed": "#3f0017",
+                      "on-error-container": "#93000a",
+                      "on-surface": "#1b1c1c",
+                      "background": "#fcf9f8",
+                      "surface-bright": "#fcf9f8",
+                      "surface-container-lowest": "#ffffff",
+                      "error": "#ba1a1a",
+                      "surface-container-highest": "#e4e2e1",
+                      "on-tertiary-fixed": "#3d0600",
+                      "surface-container-low": "#f6f3f2",
+                      "on-tertiary": "#ffffff",
+                      "on-primary": "#ffffff",
+                      "on-error": "#ffffff",
+                      "inverse-surface": "#303030",
+                      "on-background": "#1b1c1c",
+                      "secondary-fixed-dim": "#e3b5ff",
+                      "error-container": "#ffdad6",
+                      "surface-variant": "#e4e2e1",
+                      "primary-fixed-dim": "#ffb1c0",
+                      "on-primary-fixed-variant": "#90003d",
+                      "secondary-container": "#cb80fe",
+                      "surface-tint": "#bb0452",
+                      "on-secondary-fixed-variant": "#6a1c9b",
+                      "outline-variant": "#e2bec3"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "fontFamily": {
+                      "headline": ["Inter"],
+                      "body": ["Inter"],
+                      "label": ["Inter"]
+              }
+            },
+          },
+        }
+      </script>
+</head>
+<body class="bg-surface text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopAppBar (Mobile Context and Global Actions) -->
+<header class="fixed top-0 w-full z-50 bg-[#fcf9f8]/80 backdrop-blur-xl flex justify-between items-center px-6 py-3 w-full md:hidden">
+<div class="text-xl font-bold bg-gradient-to-r from-[#b7004f] via-[#833ab4] to-[#ac2c11] bg-clip-text text-transparent font-inter tracking-tight">
+            Instagram Ethos
+        </div>
+<div class="flex items-center gap-4 text-[#5a4045]">
+<span class="material-symbols-outlined" data-icon="add_box">add_box</span>
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+<span class="material-symbols-outlined" data-icon="send">send</span>
+</div>
+</header>
+<!-- SideNavBar (Desktop Shell) -->
+<nav class="hidden md:flex flex-col fixed left-0 top-0 h-full py-8 gap-4 bg-[#fcf9f8] w-64 font-inter text-sm border-r border-surface-container">
+<div class="text-2xl font-black mb-8 px-6 bg-gradient-to-r from-[#b7004f] via-[#833ab4] to-[#ac2c11] bg-clip-text text-transparent">
+            Editorial Lens
+        </div>
+<div class="flex flex-col gap-1 px-2">
+<a class="flex items-center gap-4 py-3 px-4 text-[#5a4045] hover:bg-[#f6f3f2] rounded-lg transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span>Home</span>
+</a>
+<a class="flex items-center gap-4 py-3 px-4 text-[#5a4045] hover:bg-[#f6f3f2] rounded-lg transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+<span>Search</span>
+</a>
+<a class="flex items-center gap-4 py-3 px-4 text-[#5a4045] hover:bg-[#f6f3f2] rounded-lg transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="explore">explore</span>
+<span>Explore</span>
+</a>
+<a class="flex items-center gap-4 py-3 px-4 text-[#5a4045] hover:bg-[#f6f3f2] rounded-lg transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="movie">movie</span>
+<span>Reels</span>
+</a>
+<a class="flex items-center gap-4 py-3 px-4 text-[#5a4045] hover:bg-[#f6f3f2] rounded-lg transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="chat">chat</span>
+<span>Messages</span>
+</a>
+<!-- Active Tab: Profile (Inferred context) -->
+<a class="flex items-center gap-4 py-3 px-4 text-[#b7004f] font-bold border-l-4 border-[#b7004f] pl-3 hover:bg-[#f6f3f2] transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="person" style="font-variation-settings: 'FILL' 1;">person</span>
+<span>Profile</span>
+</a>
+</div>
+<div class="mt-auto px-6">
+<button class="w-full signature-gradient text-white py-3 rounded-xl font-bold shadow-sm active:scale-95 transition-transform">
+                Create Post
+            </button>
+</div>
+<div class="flex flex-col gap-1 px-2 mt-4 pt-4 border-t border-surface-container">
+<a class="flex items-center gap-4 py-3 px-4 text-[#5a4045] hover:bg-[#f6f3f2] rounded-lg transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span>Settings</span>
+</a>
+<a class="flex items-center gap-4 py-3 px-4 text-[#5a4045] hover:bg-[#f6f3f2] rounded-lg transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="history">history</span>
+<span>Activity</span>
+</a>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="md:ml-64 pt-20 md:pt-12 min-h-screen">
+<div class="max-w-4xl mx-auto px-6 md:px-12">
+<!-- Profile Header -->
+<section class="flex flex-col md:flex-row gap-8 md:gap-16 items-start mb-12">
+<!-- Avatar with Story Ring -->
+<div class="relative shrink-0 mx-auto md:mx-0">
+<div class="w-24 h-24 md:w-40 md:h-40 rounded-full signature-border p-1">
+<img alt="User Avatar" class="w-full h-full rounded-full object-cover bg-white" data-alt="a professional portrait of a stylish woman with soft lighting, minimalist background, editorial photography style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKD_kktICh8k7EuZ3yj0GY2szBScc6NniSqhmBGniSn-oecujGRTSreCE8Cjo0JU8ewI9NbikWOn6is_wnlYHCPHsiY32UlImm5KSGdslwec_XD7JApvIQIYLXQ8sDeDEpsX0ftb04_-vU2eXU9-8tcfSJvWoFaAog9FQfISKfH6UHK99ewuE-jEagV_W4NbnSi-r2uu7mvmsfbxaAp0YCWHtQSsgULqPdsSjGltEBQUryTJc4dVwV5dg62O3aaagOGcLs9WnxnxP7"/>
+</div>
+</div>
+<!-- Profile Info -->
+<div class="flex-1 space-y-6">
+<div class="flex flex-wrap items-center gap-4">
+<h1 class="text-2xl font-light text-on-surface">curator_ethos</h1>
+<div class="flex gap-2">
+<button class="px-5 py-1.5 bg-surface-container-highest text-on-surface font-semibold text-sm rounded-lg hover:bg-surface-container-high transition-colors">
+                                Edit Profile
+                            </button>
+<button class="p-1.5 hover:bg-surface-container-low rounded-full transition-colors">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="settings">settings</span>
+</button>
+</div>
+</div>
+<!-- Stats -->
+<div class="flex gap-8 text-sm md:text-base">
+<span><strong class="font-bold">124</strong> posts</span>
+<span><strong class="font-bold">12.5k</strong> followers</span>
+<span><strong class="font-bold">842</strong> following</span>
+</div>
+<!-- Bio -->
+<div class="space-y-1">
+<p class="font-bold text-on-surface">Editorial Lens</p>
+<p class="text-on-surface-variant text-sm">Digital Creator</p>
+<p class="text-on-surface max-w-md leading-relaxed">
+                            Visual Storyteller &amp; Creative Director.<br/>
+                            Capturing the world through an editorial perspective.<br/>
+                            Tokyo | Paris | New York
+                        </p>
+<a class="inline-block text-primary font-semibold text-sm hover:underline" href="#">editorial.lens/links</a>
+</div>
+</div>
+</section>
+<!-- Highlights -->
+<section class="mb-12 flex gap-6 overflow-x-auto pb-4 hide-scrollbar">
+<div class="flex flex-col items-center gap-2 shrink-0">
+<div class="w-16 h-16 md:w-20 md:h-20 rounded-full border border-surface-container p-0.5 bg-white">
+<img alt="Highlight" class="w-full h-full rounded-full object-cover" data-alt="minimalist architectural photography of a white concrete building against a clear blue sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUax-ZNbe65O7Wtw0GkFG2l6leo-MVGOaq22ebAlLeowUxrHKf09L4wPhOyxzXqMSRoqwpy5BPshLIwtyUOTG8oLhgVDIAJmRuUeyHyBkdCgGEWWglQYdr3WWSSt8fwukCK-F8Z-IuZtO7APe6zVavMj0NC5n_G8Cx6t4R92Mibpjfs1WfJNvS0t6mcjAK_pKBrIyif_HP0js-f6GP1SrkfGsQAlPv9QuuuJ8sISqS8LyS4IUF7s2SMzSRrHWR1sWF_C1fBJVeRW1o"/>
+</div>
+<span class="text-xs font-medium text-on-surface-variant">Moments</span>
+</div>
+<div class="flex flex-col items-center gap-2 shrink-0">
+<div class="w-16 h-16 md:w-20 md:h-20 rounded-full border border-surface-container p-0.5 bg-white">
+<img alt="Highlight" class="w-full h-full rounded-full object-cover" data-alt="a cozy cafe interior with warm lighting, wooden tables, and green plants, overhead shot" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDI3wmnL2wBa4uYd1sVzrX4zKccx99Zx12mXiM4ToP2VvACx4RMJZUtkA6SfuVDXKpw-pWWqLU0ZjT3X05oxptWypWjXY0uuCHTaMp8uqOaK3WiTYuB18GWQGOlnE-mhL0TQn3VdbsTR3owgA54Ufo2YuTSpi11dMQTZFG1UPJjo18pzMBSr3tb5FsIkn0mPwuG5Sm7bjHjLttoVFrIEWhYjM8JQdGBEA7RRHcSo-EL1YahDoMWcdKxxLvaYkaDpBwPZp9toqZw_p9L"/>
+</div>
+<span class="text-xs font-medium text-on-surface-variant">Spaces</span>
+</div>
+<div class="flex flex-col items-center gap-2 shrink-0">
+<div class="w-16 h-16 md:w-20 md:h-20 rounded-full border border-surface-container p-0.5 bg-white">
+<img alt="Highlight" class="w-full h-full rounded-full object-cover" data-alt="abstract texture of light reflecting on rippling water in a deep turquoise pool" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjVv_dQDY4w4PXf4TEGqaYcge1U_zFs8F7O7ZI6OowC4x_Za5S6IijP_F2xPYSJj4irHbhywiU8K882ai6FSqbnASwbZUqJmPydBZ3LVaYo5emyFT736C_QGVwVdi5mApkIuIT65r_Hnf5kCMx07SQuKC_AnMaIpwYaZptwad4dkmqrLV48rHCMqOPKN29leMI_OQV4tELSiDD_ly_xgJsEOKbSJ0obYLa4Acc5fnMeCwVMn6eBUyk08geCW52Rp3FNcdSqUJlKqQW"/>
+</div>
+<span class="text-xs font-medium text-on-surface-variant">Visuals</span>
+</div>
+<div class="flex flex-col items-center gap-2 shrink-0">
+<div class="w-16 h-16 md:w-20 md:h-20 rounded-full border border-surface-container p-0.5 bg-white flex items-center justify-center">
+<span class="material-symbols-outlined text-surface-container-highest text-3xl" data-icon="add">add</span>
+</div>
+<span class="text-xs font-medium text-on-surface-variant">New</span>
+</div>
+</section>
+<!-- Profile Tabs -->
+<div class="border-t border-surface-container">
+<div class="flex justify-center gap-12 -mt-px">
+<button class="flex items-center gap-2 py-4 border-t-2 border-[#b7004f] text-[#b7004f] font-bold text-xs tracking-widest uppercase">
+<span class="material-symbols-outlined text-sm" data-icon="grid_on" style="font-variation-settings: 'FILL' 1;">grid_on</span>
+                        Posts
+                    </button>
+<button class="flex items-center gap-2 py-4 border-t-2 border-transparent text-on-surface-variant font-medium text-xs tracking-widest uppercase hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined text-sm" data-icon="favorite">favorite</span>
+                        Likes
+                    </button>
+<button class="flex items-center gap-2 py-4 border-t-2 border-transparent text-on-surface-variant font-medium text-xs tracking-widest uppercase hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined text-sm" data-icon="bookmark">bookmark</span>
+                        Saved
+                    </button>
+</div>
+</div>
+<!-- Post Grid (Editorial Bento/Grid Hybrid) -->
+<section class="grid grid-cols-3 gap-1 md:gap-8 pb-20 mt-4 md:mt-8">
+<!-- Post 1 -->
+<div class="relative aspect-square group overflow-hidden bg-surface-container-low rounded-sm md:rounded-xl">
+<img alt="Post Content" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="high fashion editorial shot of a model wearing avant-garde clothing in a minimalist urban setting, soft grain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzPIQy6ZDel5mKujj1XEeSr3RO5SMhRCUvvEuscM1yI7ff9ITVeyKFgqm0JT9uwvqtuQO9EsTNZwGAVEjFZpK8FP7DBWzyF7hJ6nDTs63Wru9LgbXi42PkZNH8rapO9fu0ltSX5VCeIB_1QxbgQgIdKTFmwwW4_4VVhy1ERq0iF5TYwHtTHN-oEoZOC1I33MuBpXTJSH0EfctRG_2s-5OxNzQcKWuQJsIOH8jKtQ6zdFjDtUCjmPRbmc9FxrdAeSokyfFefhSirzil"/>
+<div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white gap-6">
+<div class="flex items-center gap-1.5"><span class="material-symbols-outlined" data-icon="favorite" style="font-variation-settings: 'FILL' 1;">favorite</span><span class="font-bold">1.2k</span></div>
+<div class="flex items-center gap-1.5"><span class="material-symbols-outlined" data-icon="chat" style="font-variation-settings: 'FILL' 1;">chat</span><span class="font-bold">48</span></div>
+</div>
+</div>
+<!-- Post 2 -->
+<div class="relative aspect-square group overflow-hidden bg-surface-container-low rounded-sm md:rounded-xl">
+<img alt="Post Content" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="cinematic long exposure of city lights at night from a high vantage point, bokeh effect, purple and blue tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGTQMVr84-UbDsECEMGdHCOdnMTCYnG6QbIhvvVrvXrzHUcCA6d577G2SCKVGGE6Y1_9rSclKUHCShs_S5Iy3-97f_HvHFPD8PLU8MpbtkdmPrLKkUhTgQmIJ4Bp5nLRxgMdIxEA1EzX04nXHJHB6C2Qkl0IE3CYdZrzpkoFhBfPCiNWU_jc1S7jmCXC40s73ir0hEHFpZh6hXfM1eB26lm4l5gFt1h2nLGqkKB-UNh-dclHvUFA0GjB7UYfERvYP_pfTZbVPsAa3O"/>
+<div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white gap-6">
+<div class="flex items-center gap-1.5"><span class="material-symbols-outlined" data-icon="favorite" style="font-variation-settings: 'FILL' 1;">favorite</span><span class="font-bold">890</span></div>
+<div class="flex items-center gap-1.5"><span class="material-symbols-outlined" data-icon="chat" style="font-variation-settings: 'FILL' 1;">chat</span><span class="font-bold">22</span></div>
+</div>
+</div>
+<!-- Post 3 -->
+<div class="relative aspect-square group overflow-hidden bg-surface-container-low rounded-sm md:rounded-xl">
+<img alt="Post Content" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="extreme close up of a blooming flower with delicate petals and dew drops, soft pastel color palette" src="https://lh3.googleusercontent.com/aida-public/AB6AXuATOl_WgikaEn0Xt1vNf9J3o7yVsQjXmQnyL7ynYDpez-tpk2A3ImokFOJy32Jol88HXS3_TzhkmlxgC1jRglRMXvcxGIDm8o_GAZo9bw3IHh_W2NoQDFUt91hjhF5m_XOubunkLmzIX2NJJtSX51j1mhDROHqyTU_qE8vUL_JXlJvVZS9I-tob1arfnx31zQr2Vil7dS7FRBX6UApuIf3x9LVQuWV1yf8nZbzWCr1BOyHeuzsrwK1ZBUD7KcA9oR5J91MimjrLu8vE"/>
+<div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white gap-6">
+<div class="flex items-center gap-1.5"><span class="material-symbols-outlined" data-icon="favorite" style="font-variation-settings: 'FILL' 1;">favorite</span><span class="font-bold">2.4k</span></div>
+<div class="flex items-center gap-1.5"><span class="material-symbols-outlined" data-icon="chat" style="font-variation-settings: 'FILL' 1;">chat</span><span class="font-bold">115</span></div>
+</div>
+</div>
+<!-- Post 4 -->
+<div class="relative aspect-square group overflow-hidden bg-surface-container-low rounded-sm md:rounded-xl">
+<img alt="Post Content" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="minimalist interior design showing a sleek lounge chair, tall plant, and soft natural sunlight filtering through curtains" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCH2GsgN27Ba68omSNFPV3hAg65zs79YiwYWtqBUkI2YjV_NLws197GrN0AsBX6K8oncbPJTny0hgtmREam9EFyoPaD_7WlkzfXIOlZn8T2qIC3DRtwhRN_9L3WczOYE7DjDuoty0FiIw2YMfUJ_wOdy0EVRqjvyg3f4Z1-QYuZJ4rz4N_1pwnRc3wklx4I5kq26upsTWCy5zIzWuvzTTbv4rFdW-ZHamTLPqpyIc1637P2RSUnlg8yF9ek0azawG_GVMxk9kRQzxBu"/>
+<div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white gap-6">
+<div class="flex items-center gap-1.5"><span class="material-symbols-outlined" data-icon="favorite" style="font-variation-settings: 'FILL' 1;">favorite</span><span class="font-bold">1.5k</span></div>
+<div class="flex items-center gap-1.5"><span class="material-symbols-outlined" data-icon="chat" style="font-variation-settings: 'FILL' 1;">chat</span><span class="font-bold">36</span></div>
+</div>
+</div>
+<!-- Post 5 -->
+<div class="relative aspect-square group overflow-hidden bg-surface-container-low rounded-sm md:rounded-xl">
+<img alt="Post Content" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="dramatic mountain peaks at sunrise with orange glow and deep purple shadows, misty atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQN8lA-EW9egBY6gg5c8zNLjGR6476GPbCUB8dgRudg07lUwfNcyC6SaUz1Srv74g7ap6PFvWVlwYxlnriQOlz-HkbppGHaHvmfOq0cKUxfz5QveUIQ9VspCJZCqUtYe1RcOKffTIZ4WakCBvwvv6IK6ZOeuYqYdxWSzIRIt8hCZgfNV0SkwPg5s7LIJ0LLErv0BOSEah1-ApBp2AUwhH1fHsuSgRQ7nlUSxCNPb5KQhuQ30o2J_gVxFegmVaEZSUIr5U-s1wWrMHi"/>
+<div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white gap-6">
+<div class="flex items-center gap-1.5"><span class="material-symbols-outlined" data-icon="favorite" style="font-variation-settings: 'FILL' 1;">favorite</span><span class="font-bold">940</span></div>
+<div class="flex items-center gap-1.5"><span class="material-symbols-outlined" data-icon="chat" style="font-variation-settings: 'FILL' 1;">chat</span><span class="font-bold">18</span></div>
+</div>
+</div>
+<!-- Post 6 -->
+<div class="relative aspect-square group overflow-hidden bg-surface-container-low rounded-sm md:rounded-xl">
+<img alt="Post Content" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="modern art installation with floating geometric shapes and neon light strips in a dark gallery space" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8xlgUaz8rdTDNOs2KuBqcwZG1HAL2PeNXPqwoLhOi50t3nM9EwIQpuH8MbhJYCwWU-Fg_RdmnjdVJ14iGQdPGfKRROXugDPOZRMS1rdBt8swTRSpXP4lxUlpmOJfnlLZAiEnscvbvVxodJafuRTG_qLfjMJyZQAfPqElWaCMMF86q2T9UkWCL6R_KyXpyVKNnqthvuuU_OzAjpWmGPdjglQGn8c-yQBz9UiGvCPcUqPeKMltm1ayEHTLdS1BdSvJHmwsDH3JuB6YM"/>
+<div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white gap-6">
+<div class="flex items-center gap-1.5"><span class="material-symbols-outlined" data-icon="favorite" style="font-variation-settings: 'FILL' 1;">favorite</span><span class="font-bold">3.1k</span></div>
+<div class="flex items-center gap-1.5"><span class="material-symbols-outlined" data-icon="chat" style="font-variation-settings: 'FILL' 1;">chat</span><span class="font-bold">92</span></div>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- BottomNavBar (Mobile Shell) -->
+<nav class="fixed bottom-0 w-full z-50 bg-[#fcf9f8]/80 backdrop-blur-xl md:hidden border-t border-surface-container flex justify-around items-center py-3">
+<a class="text-[#5a4045]" href="#"><span class="material-symbols-outlined" data-icon="home">home</span></a>
+<a class="text-[#5a4045]" href="#"><span class="material-symbols-outlined" data-icon="search">search</span></a>
+<a class="text-[#5a4045]" href="#"><span class="material-symbols-outlined" data-icon="movie">movie</span></a>
+<a class="text-[#5a4045]" href="#"><span class="material-symbols-outlined" data-icon="chat">chat</span></a>
+<div class="w-6 h-6 rounded-full border-2 border-[#b7004f] p-0.5">
+<img alt="Avatar Small" class="w-full h-full rounded-full object-cover" data-alt="a tiny thumbnail of a stylish portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCr-z5ZoGw5F6wGpXmNP_RRHC7IdCfBQ9QiXYKvmzQPHepY_u0CfNKyR8HBApmJGg9RiCE8ZtUtc11KvdNMDCOY7DGIP2Oq__VWgJfsNEsxBoHpuEQEaWk_Wd3Ny4Z0pJuQGw0bBDlQILU5QnOyRM0UuFcoJK0L-tSt7vowXTqUEfHr_sRvJpCGWlLHXvVSMLH82hST_ud1b4SBeMJXxsFQSWr2TiyCiIGwQ8fQSBbEeBR81QDcVzeYoUEQJ5qedJrQqW8NCrM6x5yU"/>
+</div>
+</nav>
+</body></html>
