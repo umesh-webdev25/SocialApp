@@ -1,6 +1,8 @@
 import { Icon, Avatar } from '../../components/shared';
 import { NavLink } from 'react-router-dom';
 
+const brandGradient = 'bg-gradient-to-r from-[#833AB4] via-[#E1306C] to-[#F77737] bg-clip-text text-transparent';
+
 const newNotifications = [
   {
     type: 'follow',
@@ -28,7 +30,7 @@ const earlierNotifications = [
     username: 'marcus_xyz',
     action: 'liked your post.',
     time: '2h',
-    thumbnail: 'https://lh3.googleusercontent.com/aida-public/AB6AXuANwcvZOoYg5II5rfoxtJFCUp5pUzFVSgxkzUuuOkOQ6ATXcrRTcVaFI_-MCFvsoiJFh8j8lWLvBjN3L5jROQz3TUWbXpdb_b0LFQDJf2mP1vPGEGxK-vjiLnz04UQUtjiBb_NoWIbh6iEZOV2wEcw9UEoSUli9XFxwjeGA9i_jnqkeSsWfhyCSjvT2QFLWyrE9P5wvDZoCexMnS1ccf02w5LsYhQVPCCdno5uwfzA3f2COYg3TzY7-plc0JYEowZUsTxKlFugFiVKE',
+    thumbnail: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=100&h=100&fit=crop',
   },
   {
     type: 'story',
@@ -37,7 +39,7 @@ const earlierNotifications = [
     action: 'reacted to your story:',
     reaction: '🔥',
     time: '5h',
-    storyThumbnail: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDzAkYlEvmKg6TqRhhyarOA3tFejOqHNhuSXU6D5TCifn8OkBbb5ujEjYsKU0hgsj3KEM5zPtb6Pu7R8CfcAxfKfozCrma5xB5ieAqryenFcydH80GOWdWIuXVVmgPCAnNtuqluOrxZR_9R8vMGJf5PhKc8XOY1btcnIjl3iwSXo_6K1PRsxObHDKH6AcF8HN4-p5vZQwKBYTTnv6t7YLKzRYeej99bMjGCxWWNo61RJNiWxlkGZ2Wi1Qw4Jgc9Nknz2OybUxF9pSdu',
+    storyThumbnail: 'https://images.unsplash.com/photo-1551024506-0bccd828d307?w=100&h=100&fit=crop',
   },
   {
     type: 'multiple',
@@ -48,106 +50,152 @@ const earlierNotifications = [
     usernames: 'derek_k, alina.m',
     action: 'and 4 others liked your photo.',
     time: '1d',
-    thumbnail: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCNAWcf3dWV6oiD5N4QUDbiN_yHLZ31oqDwqlB5tp7dOZIhPPtQzVxyL4julDUUa7yE4Pu9ncuAk8sNip6pQBn4Z1I4VXm1rnQv0vI-5awpj4UAKCVAnmCSnmAbp2xemuqyxHQZ2zEo1QPTURiTWyqfAUMsiGWZr6Rq5RTsOOkK7ss2YyR41s-Ev91EsdY9XaffWPiTXt4u4Thh4w5cVezyexMwj8QWOAGDkvRT8AppwEsm9Cda6r8FZBkmeqcEAH1pH0LNVpEmHnXG',
+    thumbnail: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=100&h=100&fit=crop',
   },
 ];
 
 export function NotificationsPage() {
   return (
-    <div className="min-h-screen bg-background font-sans">
-      {/* Top Navigation (Mobile) */}
-      <header className="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md flex justify-between items-center px-6 h-16 lg:hidden">
-        <span className="text-2xl font-bold tracking-tighter bg-gradient-to-r from-primary via-secondary to-tertiary bg-clip-text text-transparent">Ethos Minimal</span>
+    <div className="min-h-screen bg-gradient-to-br from-[#F5F7FA] via-[#FAFAFB] to-[#F0F2F5] font-sans">
+      
+      {/* Background decorative elements matching login page */}
+      <div className="fixed inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute -top-[20%] -right-[10%] w-[50%] h-[50%] rounded-full bg-gradient-to-br from-[#833AB4]/5 via-[#E1306C]/5 to-[#F77737]/5 blur-[120px]" />
+        <div className="absolute -bottom-[20%] -left-[10%] w-[50%] h-[50%] rounded-full bg-gradient-to-tr from-[#405DE6]/5 via-[#E1306C]/5 to-[#F56040]/5 blur-[120px]" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] rounded-full bg-gradient-to-r from-[#833AB4]/[0.02] to-[#F77737]/[0.02] blur-[100px]" />
+      </div>
+
+      {/* Top Navigation (Mobile) - Instagram Style */}
+      <header className="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md flex justify-between items-center px-6 h-16 lg:hidden border-b border-gray-100">
+        <div className="flex items-center gap-2">
+          <svg className="w-7 h-7" viewBox="0 0 24 24" fill="none">
+            <defs>
+              <linearGradient id="instaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="#833AB4" />
+                <stop offset="50%" stopColor="#E1306C" />
+                <stop offset="100%" stopColor="#F77737" />
+              </linearGradient>
+            </defs>
+            <rect x="2" y="2" width="20" height="20" rx="6" fill="url(#instaGrad)" />
+            <circle cx="12" cy="12" r="4.5" fill="white" />
+            <circle cx="17.5" cy="6.5" r="1.5" fill="white" />
+          </svg>
+          <span className={`text-2xl font-extrabold tracking-tight ${brandGradient}`}>NEXUS</span>
+        </div>
         <div className="flex items-center gap-4">
           <button className="active:scale-95 transition-transform">
-            <Icon name="settings" className="text-stone-500" />
+            <Icon name="settings" className="text-gray-600 text-2xl" />
           </button>
-          <img alt="User profile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRteRDLeWFeCT2QBqnzgdsqUWBA-Sx_piuCstqcs03sMRhAb3bytfUeVks8_Y_mPaDiNPaSSi4C-ErjQMzPcIP2P3oGhVuF4hxPUc7CPBCc8QOyw4sYxDQd4xQVvEVtkzOBkLjWGuajEuMTTujpIQTEjYpBdtYhyBR5UBZM8e6wSAAgEqh1Vk5YXHoRxm06vQTFqixccHEvPalLo4ceKsdsSwr1-lTqFri9GKHu58X4oYMVjgOEENTjnrhuzSLEZwmEF_8879D31E1" className="w-8 h-8 rounded-full object-cover" />
+          <div className="bg-gradient-to-tr from-[#833AB4] via-[#E1306C] to-[#F77737] rounded-full p-[1.5px]">
+            <div className="bg-white rounded-full p-[1px]">
+              <img alt="User profile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRteRDLeWFeCT2QBqnzgdsqUWBA-Sx_piuCstqcs03sMRhAb3bytfUeVks8_Y_mPaDiNPaSSi4C-ErjQMzPcIP2P3oGhVuF4hxPUc7CPBCc8QOyw4sYxDQd4xQVvEVtkzOBkLjWGuajEuMTTujpIQTEjYpBdtYhyBR5UBZM8e6wSAAgEqh1Vk5YXHoRxm06vQTFqixccHEvPalLo4ceKsdsSwr1-lTqFri9GKHu58X4oYMVjgOEENTjnrhuzSLEZwmEF_8879D31E1" className="w-8 h-8 rounded-full object-cover" />
+            </div>
+          </div>
         </div>
       </header>
 
       <div className="flex min-h-screen">
-        {/* Side Navigation (Desktop) */}
-        <nav className="hidden lg:flex flex-col p-4 fixed left-0 top-0 h-full w-64 border-r border-[#e4e2e1]/30 bg-[#fcf9f8] space-y-2">
-          <div className="mb-8 px-2 py-4">
-            <span className="text-2xl font-bold tracking-tighter bg-gradient-to-r from-primary via-secondary to-tertiary bg-clip-text text-transparent">Ethos Minimal</span>
+        {/* Side Navigation (Desktop) - Instagram Style */}
+        <nav className="hidden lg:flex flex-col p-4 fixed left-0 top-0 h-full w-64 bg-white/95 backdrop-blur-sm border-r border-gray-100 shadow-xl space-y-2 z-40">
+          <div className="flex items-center gap-2 mb-8 px-2 py-4">
+            <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none">
+              <defs>
+                <linearGradient id="instaGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stopColor="#833AB4" />
+                  <stop offset="50%" stopColor="#E1306C" />
+                  <stop offset="100%" stopColor="#F77737" />
+                </linearGradient>
+              </defs>
+              <rect x="2" y="2" width="20" height="20" rx="6" fill="url(#instaGrad2)" />
+              <circle cx="12" cy="12" r="4.5" fill="white" />
+              <circle cx="17.5" cy="6.5" r="1.5" fill="white" />
+            </svg>
+            <span className={`text-2xl font-extrabold tracking-tight ${brandGradient}`}>NEXUS</span>
           </div>
           <div className="space-y-1">
             {[
-              { name: 'home', label: 'Feed', to: '/home' },
-              { name: 'explore', label: 'Discover', to: '/explore' },
+              { name: 'home', label: 'Home', to: '/home' },
+              { name: 'explore', label: 'Explore', to: '/explore' },
               { name: 'notifications', label: 'Notifications', to: '/notifications', active: true },
-              { name: 'mail', label: 'Messages', to: '/messages' },
+              { name: 'chat', label: 'Messages', to: '/messages' },
               { name: 'person', label: 'Profile', to: '/profile' },
             ].map((item) => (
               <NavLink
                 key={item.name}
                 to={item.to}
                 className={({ isActive }) =>
-                  `flex items-center gap-3 px-4 py-3 rounded-lg transition-all duration-200 ${
+                  `flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-200 ${
                     isActive
-                      ? 'bg-[#f6f3f2] text-primary border-r-4 border-primary'
-                      : 'text-stone-600 hover:bg-[#f6f3f2]'
+                      ? 'bg-gradient-to-r from-[#833AB4]/10 via-[#E1306C]/10 to-[#F77737]/10 text-[#E1306C] font-semibold'
+                      : 'text-gray-600 hover:bg-gray-50 hover:text-[#E1306C]'
                   }`
                 }
               >
-                <Icon name={item.name} filled={item.active} />
-                <span className={`text-sm ${item.active ? 'font-semibold' : 'font-medium'}`}>{item.label}</span>
+                <Icon name={item.name} filled={item.active} className="text-xl" />
+                <span className="text-sm font-medium">{item.label}</span>
               </NavLink>
             ))}
           </div>
-          <div className="mt-auto pt-4 border-t border-[#e4e2e1]/30">
+          <div className="mt-auto pt-4 border-t border-gray-100">
             <div className="flex items-center gap-3 px-2 py-3">
-              <img alt="Editorial Profile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEa8LcMr46VkPDC2sen8j5lWZO7qhsql3QXcflA2F9q2aL6Q_o6-Khw441Q4fcjepIF2Huyg4B05o-vZMlsHm-FEukty3nw-C2PU1WYvi841Ub9FtNtEAFYyewOidonTOmZhZyoVvDYmshcs_brkyalhL99jeRAbPjBGciCyZDb1UnQQ-NEyX54-XdQ_WOwCpeEjWg3JXsJbZxH0jdnnsBG-d2m3MLu9BBIqa32WFwIOuMu04mGEhT8aVTO2XIHjX1w-ydcjs6GXj0" className="w-10 h-10 rounded-full object-cover" />
+              <div className="bg-gradient-to-tr from-[#833AB4] via-[#E1306C] to-[#F77737] rounded-full p-[1.5px]">
+                <div className="bg-white rounded-full p-[1px]">
+                  <img alt="Editorial Profile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEa8LcMr46VkPDC2sen8j5lWZO7qhsql3QXcflA2F9q2aL6Q_o6-Khw441Q4fcjepIF2Huyg4B05o-vZMlsHm-FEukty3nw-C2PU1WYvi841Ub9FtNtEAFYyewOidonTOmZhZyoVvDYmshcs_brkyalhL99jeRAbPjBGciCyZDb1UnQQ-NEyX54-XdQ_WOwCpeEjWg3JXsJbZxH0jdnnsBG-d2m3MLu9BBIqa32WFwIOuMu04mGEhT8aVTO2XIHjX1w-ydcjs6GXj0" className="w-10 h-10 rounded-full object-cover" />
+                </div>
+              </div>
               <div className="flex flex-col">
-                <span className="text-sm font-bold">The Curator</span>
-                <span className="text-xs text-on-surface-variant">Premium Member</span>
+                <span className="text-sm font-bold text-gray-800">The Curator</span>
+                <span className="text-xs text-gray-500">Premium Member</span>
               </div>
             </div>
           </div>
         </nav>
 
         {/* Main Content */}
-        <main className="flex-1 lg:ml-64 pt-20 lg:pt-8 pb-20 lg:pb-8 flex justify-center">
+        <main className="flex-1 lg:ml-64 pt-20 lg:pt-8 pb-20 lg:pb-8 flex justify-center relative z-10">
           <div className="w-full max-w-[600px] px-4 md:px-6">
             {/* Page Header */}
             <div className="flex items-center justify-between mb-8">
-              <h1 className="text-2xl font-bold tracking-tight">Notifications</h1>
-              <button className="text-primary text-sm font-semibold hover:opacity-80 transition-opacity">
+              <h1 className="text-2xl font-bold text-gray-800">Notifications</h1>
+              <button className="text-[#E1306C] text-sm font-semibold hover:text-[#833AB4] transition-colors">
                 Clear All
               </button>
             </div>
 
             {/* New Notifications */}
             <div className="mb-10">
-              <h2 className="text-sm font-bold text-on-surface-variant mb-4 px-1">New</h2>
+              <h2 className="text-sm font-bold text-gray-500 mb-4 px-1 uppercase tracking-wider">New</h2>
               <div className="space-y-1">
                 {newNotifications.map((notif, i) => (
-                  <div key={i} className="group flex items-center justify-between p-3 rounded-xl bg-surface-lowest hover:bg-surface-container-low transition-colors duration-200">
+                  <div key={i} className="group flex items-center justify-between p-3 rounded-xl bg-white hover:bg-gray-50 transition-all duration-200 shadow-sm">
                     <div className="flex items-center gap-4">
                       {notif.type === 'follow' ? (
                         <div className="relative w-12 h-12 flex-shrink-0">
-                          <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary via-secondary to-tertiary p-[2px]">
+                          <div className="absolute inset-0 rounded-full bg-gradient-to-br from-[#833AB4] via-[#E1306C] to-[#F77737] p-[2px]">
                             <img alt="User" src={notif.avatar} className="absolute inset-[2px] w-[calc(100%-4px)] h-[calc(100%-4px)] rounded-full object-cover border-2 border-white" />
                           </div>
                         </div>
                       ) : (
-                        <Avatar src={notif.avatar} alt={notif.username} size="md" className="flex-shrink-0" />
+                        <div className="bg-gradient-to-tr from-[#833AB4] via-[#E1306C] to-[#F77737] rounded-full p-[1.5px]">
+                          <div className="bg-white rounded-full p-[1px]">
+                            <Avatar src={notif.avatar} alt={notif.username} size="md" className="w-10 h-10 rounded-full" />
+                          </div>
+                        </div>
                       )}
                       <div className="text-sm leading-snug">
-                        <span className="font-bold">{notif.username}</span>
-                        <span className="text-on-surface-variant"> {notif.action}</span>
+                        <span className="font-bold text-gray-800">{notif.username}</span>
+                        <span className="text-gray-600"> {notif.action}</span>
                         {notif.mention && (
                           <>
-                            <span className="text-primary"> {notif.mention}</span>
-                            <span className="text-on-surface-variant italic"> {notif.quote}</span>
+                            <span className="text-[#E1306C] font-medium"> {notif.mention}</span>
+                            <span className="text-gray-600 italic"> {notif.quote}</span>
                           </>
                         )}
-                        <span className="text-[#8E8E8E] ml-1">{notif.time}</span>
+                        <span className="text-gray-400 ml-1">{notif.time}</span>
                       </div>
                     </div>
                     {notif.button && (
-                      <button className="bg-gradient-to-r from-primary via-secondary to-tertiary text-white text-xs font-bold px-5 py-2 rounded-lg active:scale-95 transition-transform">
+                      <button className="bg-gradient-to-r from-[#833AB4] via-[#E1306C] to-[#F77737] text-white text-xs font-bold px-5 py-2 rounded-lg active:scale-95 transition-all duration-200 hover:shadow-md">
                         {notif.button}
                       </button>
                     )}
@@ -158,36 +206,44 @@ export function NotificationsPage() {
 
             {/* Earlier Notifications */}
             <div>
-              <h2 className="text-sm font-bold text-on-surface-variant mb-4 px-1">Earlier</h2>
+              <h2 className="text-sm font-bold text-gray-500 mb-4 px-1 uppercase tracking-wider">Earlier</h2>
               <div className="space-y-1">
                 {earlierNotifications.map((notif, i) => (
-                  <div key={i} className="group flex items-center justify-between p-3 rounded-xl bg-surface-lowest hover:bg-surface-container-low transition-colors duration-200">
+                  <div key={i} className="group flex items-center justify-between p-3 rounded-xl bg-white hover:bg-gray-50 transition-all duration-200 shadow-sm">
                     <div className="flex items-center gap-4">
                       {notif.type === 'multiple' ? (
-                        <div className="flex -space-x-4">
+                        <div className="flex -space-x-3">
                           {notif.avatars.map((avatar, j) => (
-                            <img key={j} alt="User" src={avatar} className="w-10 h-10 rounded-full border-2 border-white object-cover" />
+                            <div key={j} className="bg-gradient-to-tr from-[#833AB4] via-[#E1306C] to-[#F77737] rounded-full p-[1px]">
+                              <div className="bg-white rounded-full p-[1px]">
+                                <img alt="User" src={avatar} className="w-8 h-8 rounded-full border border-white object-cover" />
+                              </div>
+                            </div>
                           ))}
                         </div>
                       ) : notif.type === 'story' ? (
                         <div className="relative w-12 h-12 flex-shrink-0">
-                          <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary via-secondary to-tertiary p-[2px]">
+                          <div className="absolute inset-0 rounded-full bg-gradient-to-br from-[#833AB4] via-[#E1306C] to-[#F77737] p-[2px]">
                             <img alt="User" src={notif.avatar} className="absolute inset-[2px] w-[calc(100%-4px)] h-[calc(100%-4px)] rounded-full object-cover border-2 border-white" />
                           </div>
                         </div>
                       ) : (
-                        <Avatar src={notif.avatar} alt={notif.username} size="md" className="flex-shrink-0" />
+                        <div className="bg-gradient-to-tr from-[#833AB4] via-[#E1306C] to-[#F77737] rounded-full p-[1.5px]">
+                          <div className="bg-white rounded-full p-[1px]">
+                            <Avatar src={notif.avatar} alt={notif.username} size="md" className="w-10 h-10 rounded-full" />
+                          </div>
+                        </div>
                       )}
                       <div className="text-sm leading-snug">
-                        <span className="font-bold">{notif.type === 'multiple' ? notif.usernames : notif.username}</span>
-                        <span className="text-on-surface-variant"> {notif.action}</span>
-                        {notif.reaction && <span> {notif.reaction}</span>}
-                        <span className="text-[#8E8E8E] ml-1">{notif.time}</span>
+                        <span className="font-bold text-gray-800">{notif.type === 'multiple' ? notif.usernames : notif.username}</span>
+                        <span className="text-gray-600"> {notif.action}</span>
+                        {notif.reaction && <span className="text-xl ml-1">{notif.reaction}</span>}
+                        <span className="text-gray-400 ml-1">{notif.time}</span>
                       </div>
                     </div>
                     {(notif.thumbnail || notif.storyThumbnail) && (
-                      <div className="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center overflow-hidden flex-shrink-0">
-                        <img alt="Thumbnail" src={notif.thumbnail || notif.storyThumbnail} className="w-full h-full object-cover opacity-50" />
+                      <div className="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center overflow-hidden flex-shrink-0">
+                        <img alt="Thumbnail" src={notif.thumbnail || notif.storyThumbnail} className="w-full h-full object-cover" />
                       </div>
                     )}
                   </div>
@@ -198,13 +254,20 @@ export function NotificationsPage() {
         </main>
       </div>
 
-      {/* Bottom Navigation (Mobile) */}
-      <nav className="md:hidden fixed bottom-0 left-0 right-0 h-16 bg-white/80 backdrop-blur-md flex justify-around items-center px-4 border-t border-[#e4e2e1]/30 z-50">
-        {['home', 'explore', 'notifications', 'mail', 'person'].map((name, i) => (
-          <button key={i} className={`flex flex-col items-center ${name === 'notifications' ? 'text-primary' : 'text-stone-500'}`}>
-            <Icon name={name} filled={name === 'notifications'} />
-          </button>
-        ))}
+      {/* Bottom Navigation (Mobile) - Instagram Style */}
+      <nav className="md:hidden fixed bottom-0 left-0 right-0 h-16 bg-white/80 backdrop-blur-md flex justify-around items-center px-4 border-t border-gray-100 z-50">
+        {['home', 'explore', 'notifications', 'chat', 'person'].map((name, i) => {
+          const isActive = name === 'notifications';
+          return (
+            <NavLink 
+              key={i} 
+              to={name === 'home' ? '/home' : name === 'explore' ? '/explore' : name === 'notifications' ? '/notifications' : name === 'chat' ? '/messages' : '/profile'}
+              className={`flex flex-col items-center transition-colors duration-200 ${isActive ? 'text-[#E1306C]' : 'text-gray-500'}`}
+            >
+              <Icon name={name} filled={isActive} className="text-2xl" />
+            </NavLink>
+          );
+        })}
       </nav>
     </div>
   );
