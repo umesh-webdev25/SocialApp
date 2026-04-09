@@ -5,8 +5,6 @@ const brandGradient = 'bg-gradient-to-r from-[#833AB4] via-[#E1306C] to-[#F77737
 
 const settingsNav = [
   { name: 'person', label: 'Edit Profile' },
-  { name: 'notifications', label: 'Notifications' },
-  { name: 'lock', label: 'Privacy & Security' },
   { name: 'palette', label: 'Appearance', active: true },
   { name: 'account_circle', label: 'Account Center' },
 ];

@@ -2,6 +2,7 @@ import { Suspense } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { NavigationProvider } from './NavigationContext';
 import { routes } from './routes';
+import { ErrorBoundary } from '../components/ErrorBoundary';
 
 function LoadingFallback() {
   return (
@@ -36,7 +37,9 @@ function AppRoutes() {
             route.redirect ? (
               <Navigate to={route.redirect} replace />
             ) : (
-              <PageRoute route={route} />
+              <ErrorBoundary>
+                <PageRoute route={route} />
+              </ErrorBoundary>
             )
           }
         />

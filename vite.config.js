@@ -7,4 +7,16 @@ export default defineConfig({
     react(),
     tailwindcss(),  // ✅ This replaces PostCSS config
   ],
+  server: {
+    proxy: {
+      // Proxy `/api` requests to your backend during development.
+      // Change target to your backend address/port if different.
+      '/api': {
+        target: 'http://localhost:3000',
+        changeOrigin: true,
+        secure: false,
+        rewrite: (path) => path.replace(/^\/api/, '/api'),
+      },
+    },
+  },
 })

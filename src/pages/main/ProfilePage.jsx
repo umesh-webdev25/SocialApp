@@ -1,7 +1,8 @@
 import { Icon, Avatar } from "../../components/shared";
 import { NavLink, Link } from "react-router-dom";
 
-const brandGradient = 'bg-gradient-to-r from-[#833AB4] via-[#E1306C] to-[#F77737] bg-clip-text text-transparent';
+const brandGradient =
+  "bg-gradient-to-r from-[#833AB4] via-[#E1306C] to-[#F77737] bg-clip-text text-transparent";
 
 const userAvatar =
   "https://lh3.googleusercontent.com/aida-public/AB6AXuAKD_kktICh8k7EuZ3yj0GY2szBScc6NniSqhmBGniSn-oecujGRTSreCE8Cjo0JU8ewI9NbikWOn6is_wnlYHCPHsiY32UlImm5KSGdslwec_XD7JApvIQIYLXQ8sDeDEpsX0ftb04_-vU2eXU9-8tcfSJvWoFaAog9FQfISKfH6UHK99ewuE-jEagV_W4NbnSi-r2uu7mvmsfbxaAp0YCWHtQSsgULqPdsSjGltEBQUryTJc4dVwV5dg62O3aaagOGcLs9WnxnxP7";
@@ -66,7 +67,6 @@ const navItems = [
 export function ProfilePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#F5F7FA] via-[#FAFAFB] to-[#F0F2F5]">
-      
       {/* Background decorative elements matching login page */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
         <div className="absolute -top-[20%] -right-[10%] w-[50%] h-[50%] rounded-full bg-gradient-to-br from-[#833AB4]/5 via-[#E1306C]/5 to-[#F77737]/5 blur-[120px]" />
@@ -79,17 +79,32 @@ export function ProfilePage() {
         <div className="flex items-center gap-2">
           <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none">
             <defs>
-              <linearGradient id="instaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <linearGradient
+                id="instaGrad"
+                x1="0%"
+                y1="0%"
+                x2="100%"
+                y2="100%"
+              >
                 <stop offset="0%" stopColor="#833AB4" />
                 <stop offset="50%" stopColor="#E1306C" />
                 <stop offset="100%" stopColor="#F77737" />
               </linearGradient>
             </defs>
-            <rect x="2" y="2" width="20" height="20" rx="6" fill="url(#instaGrad)" />
+            <rect
+              x="2"
+              y="2"
+              width="20"
+              height="20"
+              rx="6"
+              fill="url(#instaGrad)"
+            />
             <circle cx="12" cy="12" r="4.5" fill="white" />
             <circle cx="17.5" cy="6.5" r="1.5" fill="white" />
           </svg>
-          <div className={`text-xl font-extrabold tracking-tight ${brandGradient}`}>
+          <div
+            className={`text-xl font-extrabold tracking-tight ${brandGradient}`}
+          >
             NEXUS
           </div>
         </div>
@@ -105,21 +120,36 @@ export function ProfilePage() {
         <div className="flex items-center gap-2 px-6 mb-6">
           <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none">
             <defs>
-              <linearGradient id="instaGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+              <linearGradient
+                id="instaGrad2"
+                x1="0%"
+                y1="0%"
+                x2="100%"
+                y2="100%"
+              >
                 <stop offset="0%" stopColor="#833AB4" />
                 <stop offset="50%" stopColor="#E1306C" />
                 <stop offset="100%" stopColor="#F77737" />
               </linearGradient>
             </defs>
-            <rect x="2" y="2" width="20" height="20" rx="6" fill="url(#instaGrad2)" />
+            <rect
+              x="2"
+              y="2"
+              width="20"
+              height="20"
+              rx="6"
+              fill="url(#instaGrad2)"
+            />
             <circle cx="12" cy="12" r="4.5" fill="white" />
             <circle cx="17.5" cy="6.5" r="1.5" fill="white" />
           </svg>
-          <div className={`text-2xl font-extrabold tracking-tight ${brandGradient}`}>
+          <div
+            className={`text-2xl font-extrabold tracking-tight ${brandGradient}`}
+          >
             NEXUS
           </div>
         </div>
-        
+
         <div className="flex flex-col gap-1 px-3">
           {navItems.map((item) => (
             <NavLink
@@ -138,7 +168,7 @@ export function ProfilePage() {
             </NavLink>
           ))}
         </div>
-        
+
         <div className="mt-6 px-3">
           <NavLink
             to="/create"
@@ -154,7 +184,7 @@ export function ProfilePage() {
             Create Post
           </NavLink>
         </div>
-        
+
         <div className="flex flex-col gap-1 px-3 mt-4 pt-4 border-t border-gray-100">
           <Link
             className="flex items-center gap-3 py-3 px-4 text-gray-600 hover:bg-gray-50 hover:text-[#E1306C] rounded-xl transition-all duration-200"
@@ -176,7 +206,6 @@ export function ProfilePage() {
       {/* Main Content */}
       <main className="md:ml-64 pt-16 md:pt-8 min-h-screen relative z-10">
         <div className="max-w-4xl mx-auto px-6 md:px-12">
-          
           {/* Profile Header - Instagram Style */}
           <section className="flex flex-col md:flex-row gap-8 md:gap-16 items-start mb-12">
             <div className="relative shrink-0 mx-auto md:mx-0">
@@ -193,14 +222,28 @@ export function ProfilePage() {
 
             <div className="flex-1 space-y-6">
               <div className="flex flex-wrap items-center gap-4">
-                <h1 className="text-2xl font-light text-gray-800">curator_ethos</h1>
+                <h1 className="text-2xl font-light text-gray-800">
+                  curator_ethos
+                </h1>
                 <div className="flex gap-2">
                   <button className="px-5 py-1.5 bg-gray-100 text-gray-800 font-semibold text-sm rounded-lg hover:bg-gray-200 transition-colors">
-                    Edit Profile
+                    <Link
+                      to="/profile/edit"
+                      className="flex items-center gap-1"
+                    >
+                      <Icon name="edit" className="text-gray-600" />
+                      <span>Edit Profile</span>
+                    </Link>
                   </button>
-                  <button className="p-1.5 hover:bg-gray-100 rounded-full transition-colors">
-                    <Icon name="settings" className="text-gray-600" />
-                  </button>
+
+                  <Link
+                    to="/settings/account"
+                    className="p-1.5 hover:bg-gray-100 rounded-full transition-colors"
+                  >
+                    <button className="p-1.5 hover:bg-gray-100 rounded-full transition-colors">
+                      <Icon name="settings" className="text-gray-600" />
+                    </button>
+                  </Link>
                 </div>
               </div>
 
@@ -209,10 +252,12 @@ export function ProfilePage() {
                   <strong className="font-bold text-gray-900">124</strong> posts
                 </span>
                 <span>
-                  <strong className="font-bold text-gray-900">12.5k</strong> followers
+                  <strong className="font-bold text-gray-900">12.5k</strong>{" "}
+                  followers
                 </span>
                 <span>
-                  <strong className="font-bold text-gray-900">842</strong> following
+                  <strong className="font-bold text-gray-900">842</strong>{" "}
+                  following
                 </span>
               </div>
 
@@ -239,7 +284,10 @@ export function ProfilePage() {
           {/* Highlights - Instagram Style */}
           <section className="mb-12 flex gap-6 overflow-x-auto pb-4 scrollbar-hide">
             {highlights.map((highlight, i) => (
-              <div key={i} className="flex flex-col items-center gap-2 shrink-0 group cursor-pointer">
+              <div
+                key={i}
+                className="flex flex-col items-center gap-2 shrink-0 group cursor-pointer"
+              >
                 <div className="w-16 h-16 md:w-20 md:h-20 rounded-full p-[1.5px] bg-gradient-to-tr from-[#833AB4] via-[#E1306C] to-[#F77737] group-hover:scale-105 transition-transform duration-200">
                   <div className="bg-white rounded-full p-[1px]">
                     <Avatar
@@ -256,7 +304,10 @@ export function ProfilePage() {
             ))}
             <div className="flex flex-col items-center gap-2 shrink-0 group cursor-pointer">
               <div className="w-16 h-16 md:w-20 md:h-20 rounded-full border-2 border-gray-200 flex items-center justify-center group-hover:border-[#E1306C] transition-colors">
-                <Icon name="add" className="text-gray-400 text-3xl group-hover:text-[#E1306C] transition-colors" />
+                <Icon
+                  name="add"
+                  className="text-gray-400 text-3xl group-hover:text-[#E1306C] transition-colors"
+                />
               </div>
               <span className="text-xs font-medium text-gray-600">New</span>
             </div>
@@ -266,21 +317,36 @@ export function ProfilePage() {
           <div className="border-t border-gray-200">
             <div className="flex justify-center gap-12 -mt-px">
               {[
-                { name: "grid_on", label: "Posts", active: true },
-                { name: "favorite_border", label: "Likes", active: false },
-                { name: "bookmark", label: "Saved", active: false },
+                { name: "grid_on", label: "Posts", to: "/profile" },
+                {
+                  name: "favorite_border",
+                  label: "Likes",
+                  to: "/profile/likes",
+                },
+                { name: "bookmark", label: "Saved", to: "/profile/saved" },
               ].map((tab, i) => (
-                <button
+                <NavLink
                   key={i}
-                  className={`flex items-center gap-2 py-4 border-t-2 transition-all duration-200 ${
-                    tab.active
-                      ? "border-[#E1306C] text-[#E1306C] font-semibold"
-                      : "border-transparent text-gray-500 font-medium hover:text-gray-700"
-                  } text-xs tracking-wider uppercase`}
+                  to={tab.to}
+                  className={({ isActive }) =>
+                    `flex items-center gap-2 py-4 border-t-2 transition-all duration-200 ${
+                      isActive
+                        ? "border-[#E1306C] text-[#E1306C] font-semibold"
+                        : "border-transparent text-gray-500 font-medium hover:text-gray-700"
+                    } text-xs tracking-wider uppercase`
+                  }
                 >
-                  <Icon name={tab.name} filled={tab.active} className="text-sm" />
-                  {tab.label}
-                </button>
+                  {({ isActive }) => (
+                    <>
+                      <Icon
+                        name={tab.name}
+                        filled={isActive}
+                        className="text-sm"
+                      />
+                      {tab.label}
+                    </>
+                  )}
+                </NavLink>
               ))}
             </div>
           </div>
@@ -315,23 +381,29 @@ export function ProfilePage() {
 
       {/* Bottom Navigation (Mobile) - Instagram Style */}
       <nav className="fixed bottom-0 w-full z-50 bg-white/80 backdrop-blur-md md:hidden border-t border-gray-100 flex justify-around items-center py-3">
-        {["home", "search", "movie", "favorite_border", "account_circle"].map((name, i) => {
-          const to =
-            name === "home"
-              ? "/home"
-              : name === "search"
-              ? "/explore"
-              : name === "movie"
-              ? "/explore"
-              : name === "favorite_border"
-              ? "/notifications"
-              : "/profile";
-          return (
-            <Link key={i} className="text-gray-600 hover:text-[#E1306C] transition-colors" to={to}>
-              <Icon name={name} className="text-2xl" />
-            </Link>
-          );
-        })}
+        {["home", "search", "movie", "favorite_border", "account_circle"].map(
+          (name, i) => {
+            const to =
+              name === "home"
+                ? "/home"
+                : name === "search"
+                ? "/explore"
+                : name === "movie"
+                ? "/explore"
+                : name === "favorite_border"
+                ? "/notifications"
+                : "/profile";
+            return (
+              <Link
+                key={i}
+                className="text-gray-600 hover:text-[#E1306C] transition-colors"
+                to={to}
+              >
+                <Icon name={name} className="text-2xl" />
+              </Link>
+            );
+          },
+        )}
         <div className="w-6 h-6 rounded-full bg-gradient-to-tr from-[#833AB4] via-[#E1306C] to-[#F77737] p-[1.5px]">
           <div className="bg-white rounded-full p-[1px]">
             <img

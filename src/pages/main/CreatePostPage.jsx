@@ -1,5 +1,7 @@
 import { Icon } from '../../components/shared';
 import { NavLink, Link } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { apiGet } from '../../services/api';
 
 const brandGradient = 'bg-gradient-to-r from-[#833AB4] via-[#E1306C] to-[#F77737] bg-clip-text text-transparent';
 
@@ -14,6 +16,19 @@ const navItems = [
 const bottomNav = ['home', 'search', 'add_circle', 'favorite_border', 'account_circle'];
 
 export function CreatePostPage() {
+  const [images, setImages] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    let mounted = true;
+    apiGet('/api/media/recent')
+      .then((res) => mounted && setImages(res || []))
+      .catch((err) => mounted && setError(err.message || 'Failed to load'))
+      .finally(() => mounted && setLoading(false));
+    return () => (mounted = false);
+  }, []);
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#F5F7FA] via-[#FAFAFB] to-[#F0F2F5]">
       
@@ -89,6 +104,20 @@ export function CreatePostPage() {
               <button className="mt-4 px-6 py-2.5 bg-gradient-to-r from-[#833AB4] via-[#E1306C] to-[#F77737] text-white font-semibold rounded-xl text-sm hover:shadow-lg active:scale-95 transition-all duration-200">
                 Select from computer
               </button>
+              {/* Recent media thumbnails fetched from backend */}
+              <div className="w-full mt-4">
+                {loading && <div className="text-sm text-gray-400">Loading recent media...</div>}
+                {error && <div className="text-sm text-red-500">{error}</div>}
+                {!loading && !error && images && images.length > 0 && (
+                  <div className="grid grid-cols-3 gap-2">
+                    {images.map((img) => (
+                      <div key={img.id} className="aspect-square overflow-hidden rounded-lg bg-gray-100">
+                        <img src={img.url || img.src} alt={img.caption || 'media'} className="w-full h-full object-cover" />
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
             </div>
           </div>
 
